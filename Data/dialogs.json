@@ -1,0 +1,389 @@
+[
+	{
+		"id": "h_t0",
+		"from": "boss",
+		"trigger": {
+			"type": "start_day",
+			"value": 1
+		},
+		"condition": null,
+		"text": "Oi, eu sou o Artorias, chefe do laboratório. O pessoal da empresa manda para a gente os arquivos que não sabe se pode abrir, e o seu trabalho é dizer se cada um é limpo ou malicioso. Abre o Navegador aí na área de trabalho.",
+		"responses": [
+			{
+				"text": "Bora!"
+			}
+		],
+		"tutorial": true
+	},
+	{
+		"id": "h_t1",
+		"from": "boss",
+		"trigger": {
+			"type": "event",
+			"value": "browser_opened"
+		},
+		"condition": null,
+		"text": "Isso. Agora clica em Portal Interno, nos favoritos.",
+		"responses": [],
+		"tutorial": true
+	},
+	{
+		"id": "h_t2",
+		"from": "boss",
+		"trigger": {
+			"type": "event",
+			"value": "portal_opened"
+		},
+		"condition": null,
+		"text": "Antes de tudo, dá uma lida no Manual. Ele explica os três tipos de ameaça que a gente mais vê por aqui.",
+		"responses": [],
+		"tutorial": true
+	},
+	{
+		"id": "h_t3",
+		"from": "boss",
+		"trigger": {
+			"type": "event",
+			"value": "manual_visited"
+		},
+		"condition": null,
+		"text": "Pronto. Agora vai para a fila e abre o primeiro arquivo.",
+		"responses": [],
+		"tutorial": true
+	},
+	{
+		"id": "h_t4",
+		"from": "boss",
+		"trigger": {
+			"type": "event",
+			"value": "case_opened"
+		},
+		"condition": {
+			"var": "last_opened_case",
+			"op": "==",
+			"value": "c01"
+		},
+		"text": "Essa é a ficha do arquivo. Ela mostra pouca coisa, então abre o relatório do sandbox para ver o que ele fez quando rodou numa máquina de teste.",
+		"responses": [],
+		"tutorial": true
+	},
+	{
+		"id": "h_t5",
+		"from": "boss",
+		"trigger": {
+			"type": "event",
+			"value": "sandbox_opened"
+		},
+		"condition": {
+			"var": "last_opened_case",
+			"op": "==",
+			"value": "c01"
+		},
+		"text": "É isso que ele fez. Parece o que um leitor de PDF faria? Volta para o caso quando terminar de olhar.",
+		"responses": [],
+		"tutorial": true
+	},
+	{
+		"id": "h_t6",
+		"from": "boss",
+		"trigger": {
+			"type": "event",
+			"value": "case_retomado"
+		},
+		"condition": {
+			"var": "last_opened_case",
+			"op": "==",
+			"value": "c01"
+		},
+		"text": "Agora responde as quatro perguntas e escolhe o veredito. O verificador de assinaturas também está no caso, se quiser conferir antes. Quando tiver certeza, carimba.",
+		"responses": [],
+		"tutorial": true
+	},
+	{
+		"id": "h_t7",
+		"from": "boss",
+		"trigger": {
+			"type": "case_resolved",
+			"value": "c01"
+		},
+		"condition": {
+			"var": "tutorial_correct",
+			"op": "==",
+			"value": true
+		},
+		"text": "Isso aí. O resto da fila é com você. Se travar em algum arquivo, chama o Leo no chat. A gente se fala no fim do dia.",
+		"responses": [
+			{
+				"text": "Pode deixar."
+			}
+		],
+		"define_status": "ausente",
+		"tutorial": true
+	},
+	{
+		"id": "h_t7_wrong",
+		"from": "boss",
+		"trigger": {
+			"type": "case_resolved",
+			"value": "c01"
+		},
+		"condition": {
+			"var": "tutorial_correct",
+			"op": "==",
+			"value": false
+		},
+		"text": "Não era esse o veredito, mas errar o primeiro arquivo acontece com todo mundo. Lê a explicação que apareceu: ela mostra o que dava para ver na ficha e no sandbox. O resto da fila é com você. Se travar em algum arquivo, chama o Leo no chat. A gente se fala no fim do dia.",
+		"responses": [
+			{
+				"text": "Pode deixar."
+			}
+		],
+		"define_status": "ausente",
+		"tutorial": true
+	},
+	{
+		"id": "r_d1_ola",
+		"from": "someone",
+		"trigger": {
+			"type": "case_resolved",
+			"value": "c01"
+		},
+		"condition": null,
+		"text": "E aí, gente nova. Eu sou o Leo, também trabalho na análise. Um conselho que eu queria ter ouvido no primeiro dia: confere sempre a assinatura antes de decidir.",
+		"responses": [
+			{
+				"text": "Valeu, Leo.",
+				"contact_response": "Tamo junto."
+			}
+		]
+	},
+	{
+		"id": "r_d1_c03",
+		"from": "someone",
+		"trigger": {
+			"type": "case_resolved",
+			"value": "c03"
+		},
+		"condition": null,
+		"text": "Esse \"atualizador\" sem assinatura é velho conhecido. Já caí numa dessas no meu primeiro mês e passei a tarde formatando o computador.",
+		"responses": [
+			{
+				"text": "Hehe, anotado."
+			}
+		]
+	},
+	{
+		"id": "r_d1_end",
+		"from": "someone",
+		"trigger": {
+			"type": "end_day",
+			"value": 1
+		},
+		"condition": null,
+		"text": "Primeiro dia no bolso. Amanhã chega o Banco de hashes, que diz se o laboratório já viu o arquivo antes.",
+		"responses": [
+			{
+				"text": "Até amanhã.",
+				"contact_response": "Dorme cedo."
+			}
+		]
+	},
+	{
+		"id": "r_d1_alert",
+		"from": "someone",
+		"trigger": {
+			"type": "end_day",
+			"value": 1
+		},
+		"condition": {
+			"var": "warnings",
+			"op": ">",
+			"value": 0
+		},
+		"text": "O Artorias olhou o seu resultado agora há pouco. Não leva a mal, ele olha o de todo mundo. Amanhã costuma ir melhor.",
+		"responses": [
+			{
+				"text": "Vou me cuidar."
+			}
+		]
+	},
+	{
+		"id": "h_adv_d2",
+		"from": "boss",
+		"trigger": {
+			"type": "start_day",
+			"value": 2
+		},
+		"condition": {
+			"var": "warnings",
+			"op": ">",
+			"value": 0
+		},
+		"text": "Ontem você ficou abaixo do mínimo e levou uma advertência. Não é o fim do mundo, mas hoje eu quero mais atenção nos detalhes.",
+		"responses": [
+			{
+				"text": "Pode deixar."
+			}
+		]
+	},
+	{
+		"id": "r_d2_start",
+		"from": "someone",
+		"trigger": {
+			"type": "start_day",
+			"value": 2
+		},
+		"condition": null,
+		"text": "Bom dia. Hoje tem o Banco de hashes no Laboratório. Ele só diz se a gente já viu o arquivo antes. Se nunca viu, você decide pelo resto.",
+		"responses": [
+			{
+				"text": "Entendido.",
+				"contact_response": "Boa. Qualquer coisa, grita."
+			}
+		]
+	},
+	{
+		"id": "r_d2_c05",
+		"from": "someone",
+		"trigger": {
+			"type": "event",
+			"value": "case_opened"
+		},
+		"condition": {
+			"var": "last_opened_case",
+			"op": "==",
+			"value": "c05"
+		},
+		"text": "A TI abriu um chamado hoje cedo pedindo para liberar uma ferramenta de acesso remoto. Pode ser essa. Confere a assinatura e para onde ela conecta.",
+		"responses": [
+			{
+				"text": "Anotado."
+			}
+		]
+	},
+	{
+		"id": "r_d2_c07",
+		"from": "someone",
+		"trigger": {
+			"type": "case_resolved",
+			"value": "c07"
+		},
+		"condition": null,
+		"text": "Fiz uma pausa para o café aqui. A tarde de terça sempre se arrasta, né?",
+		"responses": [
+			{
+				"text": "Total.",
+				"contact_response": "Pelo menos a fila anda."
+			}
+		]
+	},
+	{
+		"id": "r_d2_end",
+		"from": "someone",
+		"trigger": {
+			"type": "end_day",
+			"value": 2
+		},
+		"condition": null,
+		"text": "Segundo dia fechado. Amanhã chega a Consulta de endereços, e a ficha passa a mostrar o recado de quem enviou. Ajuda, mas nem todo recado diz a verdade.",
+		"responses": [
+			{
+				"text": "Beleza."
+			}
+		]
+	},
+	{
+		"id": "h_d2_end",
+		"from": "boss",
+		"trigger": {
+			"type": "end_day",
+			"value": 2
+		},
+		"condition": null,
+		"text": "Passei os olhos nos relatórios de segunda e de hoje. Arquivos diferentes ligaram para endereços de fora. Amanhã, com a Consulta de endereços, eu quero saber se é coincidência.",
+		"responses": [
+			{
+				"text": "Pode deixar."
+			}
+		]
+	},
+	{
+		"id": "h_adv_d3",
+		"from": "boss",
+		"trigger": {
+			"type": "start_day",
+			"value": 3
+		},
+		"condition": {
+			"var": "warnings",
+			"op": ">",
+			"value": 0
+		},
+		"text": "Você já tem uma advertência. Hoje é o último dia, então confere cada arquivo duas vezes.",
+		"responses": [
+			{
+				"text": "Entendi."
+			}
+		]
+	},
+	{
+		"id": "r_d3_start",
+		"from": "someone",
+		"trigger": {
+			"type": "start_day",
+			"value": 3
+		},
+		"condition": null,
+		"text": "Última rodada. A ficha agora mostra o recado de quem enviou, mas é só o que a pessoa disse. E clica nos IPs do sandbox: a Consulta de endereços diz de quem é cada um.",
+		"responses": [
+			{
+				"text": "Vamos nessa."
+			}
+		]
+	},
+	{
+		"id": "r_d3_c12",
+		"from": "someone",
+		"trigger": {
+			"type": "case_resolved",
+			"value": "c12"
+		},
+		"condition": null,
+		"text": "Faltam dois. Respira e confere tudo de novo antes de carimbar.",
+		"responses": [
+			{
+				"text": "Ok."
+			}
+		]
+	},
+	{
+		"id": "h_d3_c14",
+		"from": "boss",
+		"trigger": {
+			"type": "event",
+			"value": "case_opened"
+		},
+		"condition": {
+			"var": "last_opened_case",
+			"op": "==",
+			"value": "c14"
+		},
+		"text": "Esse é o último arquivo. Sem pressa. Vale lembrar do que você viu nos outros dias.",
+		"responses": [
+			{
+				"text": "Pode deixar."
+			}
+		]
+	},
+	{
+		"id": "h_end",
+		"from": "boss",
+		"trigger": {
+			"type": "end_day",
+			"value": 3
+		},
+		"condition": null,
+		"text": "Acabou o estágio. Dá uma olhada no resultado do dia e depois me chama numa videochamada. Antes disso, uma coisa: o 203.0.113.9 apareceu na segunda e de novo hoje, e o 198.51.100.7 na terça e hoje. É a mesma gente nos dois casos, e a TI já está bloqueando os dois.",
+		"responses": []
+	}
+]

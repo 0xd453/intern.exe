@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://cmqqdcnebj5ru"]
+
+[ext_resource type="Theme" uid="uid://6sjk1c0e1lag" path="res://Theme/windows_xp.tres" id="1_c3ei8"]
+[ext_resource type="Script" uid="uid://bqncxxcf7nk2a" path="res://Scripts/Windows/Browser/loading.gd" id="2_tnvh2"]
+
+[node name="Loading" type="Control" unique_id=1963396014]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_c3ei8")
+script = ExtResource("2_tnvh2")
+
+[node name="Background" type="PanelContainer" parent="." unique_id=841044739]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"PageBackground"
+
+[node name="Center" type="CenterContainer" parent="." unique_id=1209281651]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Card" type="PanelContainer" parent="Center" unique_id=1574578191]
+layout_mode = 2
+theme_type_variation = &"Loading"
+
+[node name="Box" type="VBoxContainer" parent="Center/Card" unique_id=1039744406]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Row" type="HBoxContainer" parent="Center/Card/Box" unique_id=1287457453]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Text" type="Label" parent="Center/Card/Box/Row" unique_id=1191128844]
+layout_mode = 2
+theme_type_variation = &"LabelSubtitle"
+text = "Carregando"
+
+[node name="Points" type="Label" parent="Center/Card/Box/Row" unique_id=375542410]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(26, 0)
+layout_mode = 2
+theme_type_variation = &"LabelSubtitle"
+text = "..."
+
+[node name="Bar" type="ProgressBar" parent="Center/Card/Box" unique_id=1008684211]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 14)
+layout_mode = 2
+value = 40.0
+show_percentage = false

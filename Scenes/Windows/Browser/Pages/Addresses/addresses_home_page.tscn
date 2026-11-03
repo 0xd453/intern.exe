@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://c5wughlvi6kqs"]
+
+[ext_resource type="PackedScene" uid="uid://d3grvjnul4qot" path="res://Scenes/Windows/Browser/Pages/base_page.tscn" id="1_0gsia"]
+[ext_resource type="PackedScene" uid="uid://bs2wdkeh58kmh" path="res://Scenes/Windows/Browser/Pages/Addresses/ip_chip.tscn" id="2_f4lqc"]
+[ext_resource type="Script" uid="uid://cqwcuyfs7jpro" path="res://Scripts/Windows/Browser/Pages/Addresses/addresses_home_page.gd" id="2_ig004"]
+
+[node name="AddressesHomePage" unique_id=1943806628 instance=ExtResource("1_0gsia")]
+script = ExtResource("2_ig004")
+title_page = "Endereços"
+
+[node name="Title" type="Label" parent="Root/Margin/Body" parent_id_path=PackedInt32Array(2987910) index="0" unique_id=233932189]
+layout_mode = 2
+theme_type_variation = &"LabelPage"
+text = "Consulta de Endereços"
+
+[node name="Text" type="Label" parent="Root/Margin/Body" parent_id_path=PackedInt32Array(2987910) index="1" unique_id=954204912]
+layout_mode = 2
+text = "Escolha um dos endereços IP do relatório do sandbox para ver sobre."
+autowrap_mode = 3
+
+[node name="Chips" type="HFlowContainer" parent="Root/Margin/Body" parent_id_path=PackedInt32Array(2987910) index="2" unique_id=40476089]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Button" parent="Root/Margin/Body/Chips" index="0" unique_id=1846113796 instance=ExtResource("2_f4lqc")]
+layout_mode = 2
+
+[node name="Button2" parent="Root/Margin/Body/Chips" index="1" unique_id=968993438 instance=ExtResource("2_f4lqc")]
+layout_mode = 2
+
+[node name="WithoutIps" type="Label" parent="Root/Margin/Body" parent_id_path=PackedInt32Array(2987910) index="3" unique_id=628639318]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_type_variation = &"LabelSmall"
+text = "O arquivo em análise não tem endereços para consultar"

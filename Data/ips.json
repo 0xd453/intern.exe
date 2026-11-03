@@ -1,0 +1,32 @@
+{
+	"203.0.113.9": {
+		"owner": "Hospedagem anônima",
+		"location": "Exterior",
+		"reputation": "suspicious",
+		"note": "O laboratório já viu esse endereço em 14 programas maliciosos. O registro mais antigo é de segunda-feira."
+	},
+	"198.51.100.7": {
+		"owner": "Servidor sem registro",
+		"location": "Exterior",
+		"reputation": "suspicious",
+		"note": "Recebe conexões de vários programas suspeitos. Apareceu aqui pela primeira vez na terça-feira."
+	},
+	"10.0.0.5": {
+		"owner": "Servidor de suporte da TI",
+		"location": "Rede interna da Fortify",
+		"reputation": "trusted",
+		"note": "Servidor oficial da TI da empresa."
+	},
+	"10.0.0.20": {
+		"owner": "Servidor de backup da TI",
+		"location": "Rede interna da Fortify",
+		"reputation": "trusted",
+		"note": "Guarda os backups da empresa."
+	},
+	"10.0.0.31": {
+		"owner": "Servidor de inventário da TI",
+		"location": "Rede interna da Fortify",
+		"reputation": "trusted",
+		"note": "Recebe os relatórios de diagnóstico das máquinas."
+	}
+}

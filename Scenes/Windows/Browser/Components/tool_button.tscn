@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dbb2gyn6i51q4"]
+
+[ext_resource type="Texture2D" uid="uid://bo0nm6nskxmh6" path="res://Assets/icons/tool_sandbox.png" id="1_m0xp8"]
+[ext_resource type="Theme" uid="uid://6sjk1c0e1lag" path="res://Theme/windows_xp.tres" id="1_ple7w"]
+
+[node name="ToolButton" type="Button" unique_id=605211036]
+offset_right = 178.0
+offset_bottom = 24.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource("1_ple7w")
+theme_type_variation = &"ToolButton"
+text = "Relatório Sandbox"
+icon = ExtResource("1_m0xp8")

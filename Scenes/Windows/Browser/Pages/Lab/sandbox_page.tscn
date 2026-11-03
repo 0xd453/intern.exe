@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://kyfmpeschkx6"]
+
+[ext_resource type="PackedScene" uid="uid://jghlw22yfq1x" path="res://Scenes/Windows/Browser/Pages/Lab/tool_page.tscn" id="1_wwhr8"]
+[ext_resource type="Script" uid="uid://cc7o8hpuhhgue" path="res://Scripts/Windows/Browser/Pages/Lab/sandbox_page.gd" id="2_kp645"]
+[ext_resource type="PackedScene" uid="uid://cstc1fvra8kw2" path="res://Scenes/Windows/Browser/Pages/Lab/event_row.tscn" id="2_q7kcj"]
+
+[node name="SandboxPage" unique_id=1943806628 instance=ExtResource("1_wwhr8")]
+script = ExtResource("2_kp645")
+tool_id = "sandbox"
+title_page = "Sandbox"
+
+[node name="Intro" type="Label" parent="Root/Margin/Body/Details" parent_id_path=PackedInt32Array(872473410) index="0" unique_id=1769175318]
+layout_mode = 2
+text = "O arquivo rodou em um ambiente isolado. Veja o que ele fez:"
+
+[node name="Events" type="VBoxContainer" parent="Root/Margin/Body/Details" parent_id_path=PackedInt32Array(872473410) index="1" unique_id=1126949686]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="EventRow" parent="Root/Margin/Body/Details/Events" index="0" unique_id=1326579397 instance=ExtResource("2_q7kcj")]
+layout_mode = 2
+
+[node name="EventRow2" parent="Root/Margin/Body/Details/Events" index="1" unique_id=476423338 instance=ExtResource("2_q7kcj")]
+layout_mode = 2
+
+[node name="Tip" type="Label" parent="Root/Margin/Body/Details" parent_id_path=PackedInt32Array(872473410) index="2" unique_id=34958413]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabelSmall"
+text = "Clique em um endereço de IP para ver sobre."

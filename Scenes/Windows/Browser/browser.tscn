@@ -1,0 +1,161 @@
+[gd_scene format=3 uid="uid://ta0wb14joknf"]
+
+[ext_resource type="PackedScene" uid="uid://ccmbhhaq3pupx" path="res://Scenes/Windows/xp_window.tscn" id="1_slr2u"]
+[ext_resource type="Script" uid="uid://chmqpgdebhu5s" path="res://Scripts/Windows/Browser/browser.gd" id="2_ds5bd"]
+[ext_resource type="Texture2D" uid="uid://xhp471vyis2l" path="res://Assets/tango-desktop-icons/image-tango-feet.png" id="2_m4il3"]
+[ext_resource type="PackedScene" uid="uid://dw8oivl6h1pb3" path="res://Scenes/Windows/Browser/Pages/start_page.tscn" id="3_1l0gy"]
+[ext_resource type="PackedScene" uid="uid://6lo6e13cpcmp" path="res://Scenes/Windows/Browser/Components/favorite_button.tscn" id="3_v1gm0"]
+[ext_resource type="PackedScene" uid="uid://cmqqdcnebj5ru" path="res://Scenes/Windows/Browser/loading.tscn" id="4_v1gm0"]
+[ext_resource type="PackedScene" uid="uid://cxeic853b8mvg" path="res://Scenes/Windows/Browser/Pages/no_connection_page.tscn" id="4_wlyf0"]
+[ext_resource type="PackedScene" uid="uid://o7wiephcgbn" path="res://Scenes/Windows/Browser/Pages/not_found_page.tscn" id="5_elngw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8wkej"]
+atlas = ExtResource("2_m4il3")
+region = Rect2(273, 160, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3y51e"]
+atlas = ExtResource("2_m4il3")
+region = Rect2(537, 232, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dk0lr"]
+atlas = ExtResource("2_m4il3")
+region = Rect2(513, 232, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ds5bd"]
+atlas = ExtResource("2_m4il3")
+region = Rect2(273, 328, 16, 16)
+
+[node name="Browser" unique_id=804512762 instance=ExtResource("1_slr2u")]
+script = ExtResource("2_ds5bd")
+scene_start = ExtResource("3_1l0gy")
+scene_without_connection = ExtResource("4_wlyf0")
+scene_no_found = ExtResource("5_elngw")
+app_id = "browser"
+init_size = Vector2(880, 640)
+init_pos = "left"
+title = "Navegador"
+icon = SubResource("AtlasTexture_8wkej")
+
+[node name="Root" type="VBoxContainer" parent="Column/BodyMargin/Body/Content" parent_id_path=PackedInt32Array(886505314) index="0" unique_id=2029334444]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Bar" type="MarginContainer" parent="Column/BodyMargin/Body/Content/Root" index="0" unique_id=1910108320]
+layout_mode = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 3
+
+[node name="RowBar" type="HBoxContainer" parent="Column/BodyMargin/Body/Content/Root/Bar" index="0" unique_id=2109222757]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="BtnBack" type="Button" parent="Column/BodyMargin/Body/Content/Root/Bar/RowBar" index="0" unique_id=553367802]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 26)
+layout_mode = 2
+tooltip_text = "Voltar"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+icon = SubResource("AtlasTexture_3y51e")
+
+[node name="BtnForward" type="Button" parent="Column/BodyMargin/Body/Content/Root/Bar/RowBar" index="1" unique_id=1909528875]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 26)
+layout_mode = 2
+tooltip_text = "Avançar"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+icon = SubResource("AtlasTexture_dk0lr")
+
+[node name="BtnReload" type="Button" parent="Column/BodyMargin/Body/Content/Root/Bar/RowBar" index="2" unique_id=1957277055]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 26)
+layout_mode = 2
+tooltip_text = "Recarregar"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+icon = SubResource("AtlasTexture_ds5bd")
+
+[node name="LblAddress" type="Label" parent="Column/BodyMargin/Body/Content/Root/Bar/RowBar" index="3" unique_id=848761595]
+layout_mode = 2
+theme_type_variation = &"LabelSmallBold"
+text = "Endereço:"
+
+[node name="Address" type="LineEdit" parent="Column/BodyMargin/Body/Content/Root/Bar/RowBar" index="4" unique_id=184178063]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Use os favoritos e os links das páginas para navegar."
+focus_mode = 0
+text = "intranet.fortify.sec/fila"
+placeholder_text = "Página Inicial"
+editable = false
+
+[node name="Favorites" type="MarginContainer" parent="Column/BodyMargin/Body/Content/Root" index="1" unique_id=592292376]
+layout_mode = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 4
+
+[node name="RowFav" type="HBoxContainer" parent="Column/BodyMargin/Body/Content/Root/Favorites" index="0" unique_id=2013754149]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="LblFav" type="Label" parent="Column/BodyMargin/Body/Content/Root/Favorites/RowFav" index="0" unique_id=266100571]
+layout_mode = 2
+theme_type_variation = &"LabelSmallBold"
+text = "Favoritos"
+
+[node name="ListFavorites" type="HBoxContainer" parent="Column/BodyMargin/Body/Content/Root/Favorites/RowFav" index="1" unique_id=1432020851]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Example1" parent="Column/BodyMargin/Body/Content/Root/Favorites/RowFav/ListFavorites" index="0" unique_id=975734038 instance=ExtResource("3_v1gm0")]
+layout_mode = 2
+
+[node name="Example2" parent="Column/BodyMargin/Body/Content/Root/Favorites/RowFav/ListFavorites" index="1" unique_id=973308614 instance=ExtResource("3_v1gm0")]
+layout_mode = 2
+text = "Laboratório"
+
+[node name="AreaPages" type="Control" parent="Column/BodyMargin/Body/Content/Root" index="2" unique_id=1341241754]
+clip_contents = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Background" type="PanelContainer" parent="Column/BodyMargin/Body/Content/Root/AreaPages" index="0" unique_id=167510068]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"PageBackground"
+
+[node name="Scroll" type="ScrollContainer" parent="Column/BodyMargin/Body/Content/Root/AreaPages" index="1" unique_id=914695815]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+
+[node name="Loading" parent="Column/BodyMargin/Body/Content/Root/AreaPages" index="2" unique_id=1963396014 instance=ExtResource("4_v1gm0")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+
+[node name="LayerDialog" type="Control" parent="Column/BodyMargin/Body/Content/Root/AreaPages" index="3" unique_id=179913283]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2

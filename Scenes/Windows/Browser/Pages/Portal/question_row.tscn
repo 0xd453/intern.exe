@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dq4swaefsdpoc"]
+
+[ext_resource type="Theme" uid="uid://6sjk1c0e1lag" path="res://Theme/windows_xp.tres" id="1_nw0wf"]
+[ext_resource type="Script" uid="uid://fnle0lwjmdpy" path="res://Scripts/Windows/Browser/Pages/Portal/question_row.gd" id="2_bgb7l"]
+
+[node name="QuestionRow" type="PanelContainer" unique_id=639862837]
+offset_right = 215.77
+offset_bottom = 104.0
+theme = ExtResource("1_nw0wf")
+theme_type_variation = &"CardCompact"
+script = ExtResource("2_bgb7l")
+
+[node name="Row" type="HBoxContainer" parent="." unique_id=494789871]
+layout_mode = 2
+
+[node name="Text" type="Label" parent="Row" unique_id=1241226526]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "1. Pergunta exemplo"
+autowrap_mode = 3
+
+[node name="BtnYes" type="Button" parent="Row" unique_id=184166345]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ButtonOption"
+toggle_mode = true
+text = "Sim"
+
+[node name="BtnNo" type="Button" parent="Row" unique_id=465224921]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ButtonOption"
+toggle_mode = true
+text = "Não"

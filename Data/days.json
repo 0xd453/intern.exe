@@ -1,0 +1,65 @@
+[
+	{
+		"day": 1,
+		"title": "Segunda-feira",
+		"tools": [
+			"sandbox",
+			"signature"
+		],
+		"tools_new": [],
+		"show_request": false,
+		"immediate_feedback": true,
+		"cases": [
+			"c01",
+			"c02",
+			"c03",
+			"c04"
+		],
+		"rules": "day1"
+	},
+	{
+		"day": 2,
+		"title": "Terça-feira",
+		"tools": [
+			"sandbox",
+			"signature",
+			"hash"
+		],
+		"tools_new": [
+			"hash"
+		],
+		"show_request": false,
+		"immediate_feedback": false,
+		"cases": [
+			"c05",
+			"c06",
+			"c07",
+			"c08",
+			"c09"
+		],
+		"rules": "day2"
+	},
+	{
+		"day": 3,
+		"title": "Quarta-feira",
+		"tools": [
+			"sandbox",
+			"signature",
+			"hash",
+			"addresses"
+		],
+		"tools_new": [
+			"addresses"
+		],
+		"show_request": true,
+		"immediate_feedback": false,
+		"cases": [
+			"c10",
+			"c11",
+			"c12",
+			"c13",
+			"c14"
+		],
+		"rules": "day3"
+	}
+]

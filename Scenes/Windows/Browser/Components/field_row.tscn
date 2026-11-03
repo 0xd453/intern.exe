@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://ch8pg7puatct7"]
+
+[ext_resource type="Theme" uid="uid://6sjk1c0e1lag" path="res://Theme/windows_xp.tres" id="1_exb6e"]
+[ext_resource type="Script" uid="uid://c3xld13uouoxq" path="res://Scripts/Windows/Browser/Components/field_row.gd" id="2_2pvlg"]
+
+[node name="FieldRow" type="HBoxContainer" unique_id=643036331]
+offset_right = 105.0
+offset_bottom = 111.0
+theme = ExtResource("1_exb6e")
+theme_override_constants/separation = 8
+script = ExtResource("2_2pvlg")
+
+[node name="Key" type="Label" parent="." unique_id=1681041878]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(96, 0)
+layout_mode = 2
+size_flags_vertical = 0
+theme_type_variation = &"LabelBold"
+text = "Chave"
+
+[node name="Value" type="Label" parent="." unique_id=1988123932]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Valor"
+autowrap_mode = 3

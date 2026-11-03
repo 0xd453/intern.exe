@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://d3grvjnul4qot"]
+
+[ext_resource type="Script" uid="uid://cltkio4d6qj06" path="res://Scripts/Windows/Browser/Pages/base_page.gd" id="1_g0a5p"]
+[ext_resource type="Theme" uid="uid://6sjk1c0e1lag" path="res://Theme/windows_xp.tres" id="1_kpkcg"]
+[ext_resource type="PackedScene" uid="uid://0d6ebgplkm10" path="res://Scenes/Windows/Browser/Components/nav_button.tscn" id="2_pyip1"]
+[ext_resource type="Texture2D" uid="uid://xhp471vyis2l" path="res://Assets/tango-desktop-icons/image-tango-feet.png" id="3_npwmi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kurhf"]
+atlas = ExtResource("3_npwmi")
+region = Rect2(393, 280, 16, 16)
+
+[node name="BasePage" type="PanelContainer" unique_id=1943806628]
+offset_right = 521.0
+offset_bottom = 97.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_kpkcg")
+theme_type_variation = &"PageBackground"
+script = ExtResource("1_g0a5p")
+
+[node name="Root" type="VBoxContainer" parent="." unique_id=1423370939]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Header" type="PanelContainer" parent="Root" unique_id=568109068]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"PortalHeader"
+
+[node name="RowCab" type="HBoxContainer" parent="Root/Header" unique_id=894194297]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Logo" type="TextureRect" parent="Root/Header/RowCab" unique_id=649367189]
+custom_minimum_size = Vector2(36, 36)
+layout_mode = 2
+size_flags_vertical = 4
+texture = SubResource("AtlasTexture_kurhf")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Names" type="VBoxContainer" parent="Root/Header/RowCab" unique_id=316427950]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 0
+
+[node name="Brand" type="Label" parent="Root/Header/RowCab/Names" unique_id=793937723]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabelPortalBrand"
+text = "Portal Interno"
+
+[node name="Sub" type="Label" parent="Root/Header/RowCab/Names" unique_id=934623937]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabelPortalSub"
+text = "Fortify Security · Dia 1 · 09:00"
+
+[node name="Gap" type="Control" parent="Root/Header/RowCab" unique_id=2065231207]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="LinksNav" type="HBoxContainer" parent="Root/Header/RowCab" unique_id=1030883947]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 4
+
+[node name="Example" parent="Root/Header/RowCab/LinksNav" unique_id=492296989 instance=ExtResource("2_pyip1")]
+layout_mode = 2
+
+[node name="Example2" parent="Root/Header/RowCab/LinksNav" unique_id=1837361199 instance=ExtResource("2_pyip1")]
+layout_mode = 2
+text = "Manual"
+
+[node name="Example3" parent="Root/Header/RowCab/LinksNav" unique_id=879658645 instance=ExtResource("2_pyip1")]
+layout_mode = 2
+text = "Fila"
+
+[node name="Example4" parent="Root/Header/RowCab/LinksNav" unique_id=534528787 instance=ExtResource("2_pyip1")]
+layout_mode = 2
+text = "Resultado"
+
+[node name="Margin" type="MarginContainer" parent="Root" unique_id=1526128506]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="Body" type="VBoxContainer" parent="Root/Margin" unique_id=2987910]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 12

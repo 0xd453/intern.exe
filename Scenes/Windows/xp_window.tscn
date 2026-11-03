@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://ccmbhhaq3pupx"]
+
+[ext_resource type="Theme" uid="uid://6sjk1c0e1lag" path="res://Theme/windows_xp.tres" id="1_4re12"]
+[ext_resource type="Script" uid="uid://cjtytigukludn" path="res://Scripts/Windows/xp_window.gd" id="2_ex0uf"]
+[ext_resource type="Texture2D" uid="uid://bcs3b54ncb7n" path="res://Assets/icons/minimize.png" id="2_jwnj8"]
+[ext_resource type="Texture2D" uid="uid://c6w1p2oyuvhai" path="res://Assets/icons/maximize.png" id="3_ex0uf"]
+[ext_resource type="Texture2D" uid="uid://im61xj1whpvc" path="res://Assets/icons/x_white.png" id="4_uqtwb"]
+
+[node name="WindowXP" type="PanelContainer" unique_id=804512762]
+custom_minimum_size = Vector2(240, 160)
+theme = ExtResource("1_4re12")
+theme_type_variation = &"WindowFrame"
+script = ExtResource("2_ex0uf")
+
+[node name="Column" type="VBoxContainer" parent="." unique_id=13426630]
+layout_mode = 2
+
+[node name="TopBar" type="PanelContainer" parent="Column" unique_id=1734514700]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_type_variation = &"WindowTopBar"
+
+[node name="Row" type="HBoxContainer" parent="Column/TopBar" unique_id=1400841332]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Icon" type="TextureRect" parent="Column/TopBar/Row" unique_id=1695900139]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Title" type="Label" parent="Column/TopBar/Row" unique_id=2099691470]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"LabelWindowTitle"
+text = "Window Title"
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="MinimizeButton" type="Button" parent="Column/TopBar/Row" unique_id=302062113]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(21, 21)
+layout_mode = 2
+size_flags_vertical = 4
+focus_mode = 0
+theme_type_variation = &"ButtonTopBar"
+icon = ExtResource("2_jwnj8")
+icon_alignment = 1
+
+[node name="MaximizeButton" type="Button" parent="Column/TopBar/Row" unique_id=818870206]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(21, 21)
+layout_mode = 2
+size_flags_vertical = 4
+focus_mode = 0
+theme_type_variation = &"ButtonTopBar"
+icon = ExtResource("3_ex0uf")
+icon_alignment = 1
+
+[node name="CloseButton" type="Button" parent="Column/TopBar/Row" unique_id=233196247]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(21, 21)
+layout_mode = 2
+size_flags_vertical = 4
+focus_mode = 0
+theme_type_variation = &"ButtonTopBarClose"
+icon = ExtResource("4_uqtwb")
+icon_alignment = 1
+
+[node name="BodyMargin" type="MarginContainer" parent="Column" unique_id=1462539604]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="Body" type="PanelContainer" parent="Column/BodyMargin" unique_id=2054584626]
+layout_mode = 2
+theme_type_variation = &"WindowBody"
+
+[node name="Content" type="MarginContainer" parent="Column/BodyMargin/Body" unique_id=886505314]
+unique_name_in_owner = true
+layout_mode = 2

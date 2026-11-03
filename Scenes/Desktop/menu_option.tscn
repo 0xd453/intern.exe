@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://d3kkt0lwd1ina"]
+
+[ext_resource type="Theme" uid="uid://6sjk1c0e1lag" path="res://Theme/windows_xp.tres" id="1_whaof"]
+[ext_resource type="Script" uid="uid://bx0mkupqmoqx3" path="res://Scripts/Desktop/menu_option.gd" id="2_vs768"]
+
+[node name="MenuOption" type="Button" unique_id=365441482]
+offset_right = 69.0
+offset_bottom = 32.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource("1_whaof")
+theme_type_variation = &"MenuItem"
+text = "Opção"
+alignment = 0
+script = ExtResource("2_vs768")

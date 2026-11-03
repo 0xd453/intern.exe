@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://8aruw1ko30g8"]
+
+[ext_resource type="Theme" uid="uid://6sjk1c0e1lag" path="res://Theme/windows_xp.tres" id="1_hsci0"]
+[ext_resource type="Script" uid="uid://b6u5bfequr0de" path="res://Scripts/Windows/Messenger/speech_balloon.gd" id="2_6l3q0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f032v"]
+
+[node name="Balloon" type="MarginContainer" unique_id=711574809]
+offset_right = 165.0
+offset_bottom = 58.0
+size_flags_horizontal = 3
+theme = ExtResource("1_hsci0")
+theme_override_constants/margin_right = 44
+script = ExtResource("2_6l3q0")
+
+[node name="Panel" type="PanelContainer" parent="." unique_id=1989898617]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"BalloonContact"
+
+[node name="Box" type="VBoxContainer" parent="Panel" unique_id=431798575]
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="Header" type="HBoxContainer" parent="Panel/Box" unique_id=1805309571]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Panel/Box/Header" unique_id=2093476125]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabelSmallBold"
+text = "Artorias"
+
+[node name="Separator" type="VSeparator" parent="Panel/Box/Header" unique_id=1651369714]
+propagate_maximum_size = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/separator = SubResource("StyleBoxEmpty_f032v")
+
+[node name="Time" type="Label" parent="Panel/Box/Header" unique_id=1778247573]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabelSmallBold"
+text = "09:00"
+
+[node name="TextBody" type="Label" parent="Panel/Box" unique_id=1358720628]
+unique_name_in_owner = true
+layout_mode = 2
+text = "I'm the abysswalker"
+autowrap_mode = 3

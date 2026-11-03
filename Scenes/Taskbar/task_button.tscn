@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://7quf8wgog6xb"]
+
+[ext_resource type="Theme" uid="uid://6sjk1c0e1lag" path="res://Theme/windows_xp.tres" id="1_fikyf"]
+
+[node name="TaskButton" type="Button" unique_id=1292997387]
+custom_minimum_size = Vector2(150, 24)
+offset_right = 150.0
+offset_bottom = 24.0
+size_flags_vertical = 4
+focus_mode = 0
+theme = ExtResource("1_fikyf")
+theme_type_variation = &"ButtonTask"
+text = "Janela"
+alignment = 0
+clip_text = true

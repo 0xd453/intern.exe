@@ -1,0 +1,76 @@
+[
+	{
+		"id": "portal",
+		"host": "intranet.test.abc",
+		"title": "Portal Interno",
+		"description": "Fila de triagem, manual e resultado do dia.",
+		"favorite": true,
+		"since_day": 1,
+		"header": "PortalHeader",
+		"menu": [
+			{
+				"text": "Início",
+				"path": "/"
+			},
+			{
+				"text": "Manual",
+				"path": "/manual"
+			},
+			{
+				"text": "Fila",
+				"path": "/queue"
+			},
+			{
+				"text": "Resultado",
+				"path": "/result"
+			}
+		],
+		"pages": {
+			"/": "res://Scenes/Windows/Browser/Pages/Portal/home_page.tscn",
+			"/manual": "res://Scenes/Windows/Browser/Pages/Portal/manual_page.tscn",
+			"/queue": "res://Scenes/Windows/Browser/Pages/Portal/queue_page.tscn",
+			"/case/*": "res://Scenes/Windows/Browser/Pages/Portal/case_page.tscn",
+			"/result": "res://Scenes/Windows/Browser/Pages/Portal/result_page.tscn"
+		}
+	},
+	{
+		"id": "lab",
+		"host": "lab.test.abc",
+		"title": "Laboratório",
+		"description": "Ferramentas para investigar o arquivo.",
+		"favorite": true,
+		"since_day": 1,
+		"header": "LabHeader",
+		"menu": [
+			{
+				"text": "Ferramentas",
+				"path": "/"
+			}
+		],
+		"pages": {
+			"/": "res://Scenes/Windows/Browser/Pages/Lab/lab_home_page.tscn",
+			"/sandbox/*": "res://Scenes/Windows/Browser/Pages/Lab/sandbox_page.tscn",
+			"/signature/*": "res://Scenes/Windows/Browser/Pages/Lab/signature_page.tscn",
+			"/hash/*": "res://Scenes/Windows/Browser/Pages/Lab/hash_page.tscn"
+		}
+	},
+	{
+		"id": "addresses",
+		"host": "addresses.test.abc",
+		"title": "Consulta de endereços",
+		"description": "De quem é cada endereço IP.",
+		"favorite": true,
+		"since_day": 3,
+		"header": "AddressesHeader",
+		"menu": [
+			{
+				"text": "Início",
+				"path": "/"
+			}
+		],
+		"pages": {
+			"/": "res://Scenes/Windows/Browser/Pages/Addresses/addresses_home_page.tscn",
+			"/ip/*": "res://Scenes/Windows/Browser/Pages/Addresses/address_page.tscn"
+		}
+	}
+]

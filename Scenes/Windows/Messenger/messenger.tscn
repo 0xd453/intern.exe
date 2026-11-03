@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://cpq6qiehqscit"]
+
+[ext_resource type="PackedScene" uid="uid://ccmbhhaq3pupx" path="res://Scenes/Windows/xp_window.tscn" id="1_vkdhr"]
+[ext_resource type="Texture2D" uid="uid://xhp471vyis2l" path="res://Assets/tango-desktop-icons/image-tango-feet.png" id="2_muhc5"]
+[ext_resource type="Script" uid="uid://ciwt1e65ybx5i" path="res://Scripts/Windows/Messenger/messenger.gd" id="2_mysxt"]
+[ext_resource type="PackedScene" uid="uid://d0mvasu1blydk" path="res://Scenes/Windows/Messenger/contact.tscn" id="3_435ms"]
+[ext_resource type="PackedScene" uid="uid://8aruw1ko30g8" path="res://Scenes/Windows/Messenger/speech_balloon.tscn" id="4_435ms"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ixacr"]
+atlas = ExtResource("2_muhc5")
+region = Rect2(537, 304, 16, 16)
+
+[node name="WindowXP" unique_id=804512762 instance=ExtResource("1_vkdhr")]
+offset_right = 240.0
+offset_bottom = 281.0
+script = ExtResource("2_mysxt")
+app_id = "msn"
+init_size = Vector2(360, 520)
+init_pos = "right"
+title = "Mensagens"
+icon = SubResource("AtlasTexture_ixacr")
+
+[node name="Margin" type="MarginContainer" parent="Column/BodyMargin/Body/Content" parent_id_path=PackedInt32Array(886505314) index="0" unique_id=988354421]
+layout_mode = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 6
+
+[node name="Root" type="VBoxContainer" parent="Column/BodyMargin/Body/Content/Margin" index="0" unique_id=1949510499]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="ContactsLabel" type="Label" parent="Column/BodyMargin/Body/Content/Margin/Root" index="0" unique_id=1916538861]
+layout_mode = 2
+theme_type_variation = &"LabelSmallBold"
+text = "Contatos"
+
+[node name="Contacts" type="VBoxContainer" parent="Column/BodyMargin/Body/Content/Margin/Root" index="1" unique_id=149574555]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="Example" parent="Column/BodyMargin/Body/Content/Margin/Root/Contacts" index="0" unique_id=1392518150 instance=ExtResource("3_435ms")]
+layout_mode = 2
+
+[node name="Example2" parent="Column/BodyMargin/Body/Content/Margin/Root/Contacts" index="1" unique_id=1821057377 instance=ExtResource("3_435ms")]
+layout_mode = 2
+
+[node name="Separator" type="HSeparator" parent="Column/BodyMargin/Body/Content/Margin/Root" index="2" unique_id=1823450137]
+layout_mode = 2
+
+[node name="TalkTitle" type="Label" parent="Column/BodyMargin/Body/Content/Margin/Root" index="3" unique_id=463116853]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabelBold"
+text = "Conversa com Artorias"
+
+[node name="TalkBox" type="PanelContainer" parent="Column/BodyMargin/Body/Content/Margin/Root" index="4" unique_id=1913675966]
+layout_mode = 2
+size_flags_vertical = 3
+theme_type_variation = &"PageBackground"
+
+[node name="Scroll" type="ScrollContainer" parent="Column/BodyMargin/Body/Content/Margin/Root/TalkBox" index="0" unique_id=862108271]
+unique_name_in_owner = true
+propagate_maximum_size = true
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="MessagesMargin" type="MarginContainer" parent="Column/BodyMargin/Body/Content/Margin/Root/TalkBox/Scroll" index="0" unique_id=1707366762]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 6
+
+[node name="Messages" type="VBoxContainer" parent="Column/BodyMargin/Body/Content/Margin/Root/TalkBox/Scroll/MessagesMargin" index="0" unique_id=1354804749]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Example" parent="Column/BodyMargin/Body/Content/Margin/Root/TalkBox/Scroll/MessagesMargin/Messages" index="0" unique_id=711574809 instance=ExtResource("4_435ms")]
+layout_mode = 2
+
+[node name="TypingIndicator" type="Label" parent="Column/BodyMargin/Body/Content/Margin/Root" index="5" unique_id=155045969]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Responses" type="VBoxContainer" parent="Column/BodyMargin/Body/Content/Margin/Root" index="6" unique_id=1753543059]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Example" type="Button" parent="Column/BodyMargin/Body/Content/Margin/Root/Responses" index="0" unique_id=490297394]
+layout_mode = 2
+text = "Resposta"

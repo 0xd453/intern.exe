@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://d0mvasu1blydk"]
+
+[ext_resource type="Theme" uid="uid://6sjk1c0e1lag" path="res://Theme/windows_xp.tres" id="1_epain"]
+[ext_resource type="Script" uid="uid://c1je5ecnbeuws" path="res://Scripts/Windows/Messenger/contact.gd" id="2_d6rll"]
+
+[node name="ContactLine" type="PanelContainer" unique_id=1392518150]
+offset_right = 131.0
+offset_bottom = 36.0
+theme = ExtResource("1_epain")
+theme_type_variation = &"Contact"
+script = ExtResource("2_d6rll")
+
+[node name="Line" type="HBoxContainer" parent="." unique_id=1369123287]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 8
+
+[node name="Status" type="PanelContainer" parent="Line" unique_id=1294749942]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(12, 12)
+layout_mode = 2
+size_flags_vertical = 4
+theme_type_variation = &"StatusOnline"
+
+[node name="Box" type="VBoxContainer" parent="Line" unique_id=1763046857]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="Name" type="Label" parent="Line/Box" unique_id=1816323635]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabelBold"
+text = "Contato"
+
+[node name="Info" type="Label" parent="Line/Box" unique_id=1996268641]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabelSmall"
+text = "Papel - Status"
+
+[node name="Badge" type="PanelContainer" parent="Line" unique_id=1921658918]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(20, 18)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+theme_type_variation = &"NotificationBadge"
+
+[node name="BadgeText" type="Label" parent="Line/Badge" unique_id=1577042523]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabelNotificationBadge"
+text = "1"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=1424126938]
+unique_name_in_owner = true
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_type_variation = &"LineClickable"

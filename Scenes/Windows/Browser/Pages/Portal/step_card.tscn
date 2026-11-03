@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://yyv5bxwq1l78"]
+
+[ext_resource type="Theme" uid="uid://6sjk1c0e1lag" path="res://Theme/windows_xp.tres" id="1_tgcdq"]
+[ext_resource type="Script" uid="uid://ukm1id7hqwnu" path="res://Scripts/Windows/Browser/Pages/Portal/step_card.gd" id="2_lf2m8"]
+
+[node name="StepCard" type="PanelContainer" unique_id=2112383713]
+offset_right = 224.0
+offset_bottom = 112.0
+size_flags_horizontal = 3
+theme = ExtResource("1_tgcdq")
+theme_type_variation = &"Card"
+script = ExtResource("2_lf2m8")
+
+[node name="Row" type="HBoxContainer" parent="." unique_id=2065691066]
+layout_mode = 2
+
+[node name="Number" type="Label" parent="Row" unique_id=1468619876]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabelPage"
+text = "1"
+
+[node name="Text" type="Label" parent="Row" unique_id=2063979661]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Texto de exemplo"
+autowrap_mode = 3

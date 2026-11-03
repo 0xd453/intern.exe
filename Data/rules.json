@@ -1,0 +1,53 @@
+{
+	"general": [
+		"Leia a ficha do arquivo.",
+		"Investigue nas ferramentas do Laboratório.",
+		"Responda as 4 perguntas e dê o veredito."
+	],
+	"meta": "Acerte pelo menos 70% dos casos de cada dia. Abaixo disso, você recebe uma advertência, e com advertência a vaga fica em risco.",
+	"glossary": [
+		{
+			"type": "Trojan",
+			"text": "Finge ser um programa legítimo e faz outra coisa por baixo.",
+			"signs": [
+				"Nome parecido com o de um programa ou empresa conhecida",
+				"Sem assinatura, com assinatura inválida ou de uma editora estranha",
+				"Fala com endereços de fora que o laboratório já viu em ataques",
+				"Se copia para a pasta Inicializar"
+			]
+		},
+		{
+			"type": "Adware",
+			"text": "Enche a tela de anúncios e mexe nas configurações do navegador.",
+			"signs": [
+				"Vem de instalador grátis ou de oferta de cupom",
+				"Abre janelas de anúncio sozinho",
+				"Troca a página inicial ou o buscador sem perguntar"
+			]
+		},
+		{
+			"type": "Ransomware",
+			"text": "Tranca os arquivos e pede dinheiro para devolvê-los.",
+			"signs": [
+				"Extensão dupla, como .pdf.exe",
+				"Costuma chegar por e-mail, mas pode vir pela rede interna",
+				"Cria arquivos .lock e apaga os backups"
+			]
+		}
+	],
+	"day1": [
+		"A ficha mostra só o básico. O resto está no Laboratório.",
+		"Empresa conhecida costuma ter assinatura válida.",
+		"Compare o nome, a origem e o que o arquivo fez."
+	],
+	"day2": [
+		"Novo: Banco de hashes. \"Conhecido malicioso\" é prova forte.",
+		"\"Desconhecido\" só quer dizer que o laboratório nunca viu o arquivo. Decida pelo conjunto.",
+		"Ferramentas da TI podem parecer suspeitas. Confira a assinatura e para onde elas conectam."
+	],
+	"day3": [
+		"Novo: Consulta de endereços. Clique num IP do relatório do sandbox.",
+		"O recado de quem enviou é pista, não prova.",
+		"Hoje os sinais vêm misturados. Leia com calma a observação de cada ferramenta."
+	]
+}

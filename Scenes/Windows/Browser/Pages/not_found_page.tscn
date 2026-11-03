@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://o7wiephcgbn"]
+
+[ext_resource type="PackedScene" uid="uid://d3grvjnul4qot" path="res://Scenes/Windows/Browser/Pages/base_page.tscn" id="1_fwmlo"]
+[ext_resource type="Script" uid="uid://sohdfortm7b4" path="res://Scripts/Windows/Browser/Pages/not_found_page.gd" id="2_hyscx"]
+
+[node name="NotFoundPage" unique_id=1943806628 instance=ExtResource("1_fwmlo")]
+script = ExtResource("2_hyscx")
+title_page = "Página não encontrada"
+
+[node name="Title" type="Label" parent="Root/Margin/Body" parent_id_path=PackedInt32Array(2987910) index="0" unique_id=1867743992]
+layout_mode = 2
+theme_type_variation = &"LabelPage"
+text = "Página não encontrada"
+
+[node name="Text" type="Label" parent="Root/Margin/Body" parent_id_path=PackedInt32Array(2987910) index="1" unique_id=134386262]
+unique_name_in_owner = true
+layout_mode = 2
+autowrap_mode = 3
+
+[node name="BtnBack" type="Button" parent="Root/Margin/Body" parent_id_path=PackedInt32Array(2987910) index="2" unique_id=611127871]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+theme_type_variation = &"ButtonLarge"
+text = "Ir para o início"

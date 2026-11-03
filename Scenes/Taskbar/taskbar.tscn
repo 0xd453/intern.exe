@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://wxku7d266gvg"]
+
+[ext_resource type="Script" uid="uid://c4vpfykvbwa5j" path="res://Scripts/Taskbar/taskbar.gd" id="1_u7nkp"]
+[ext_resource type="Theme" uid="uid://6sjk1c0e1lag" path="res://Theme/windows_xp.tres" id="2_2c7mr"]
+[ext_resource type="Texture2D" uid="uid://xhp471vyis2l" path="res://Assets/tango-desktop-icons/image-tango-feet.png" id="4_323wh"]
+[ext_resource type="PackedScene" uid="uid://7quf8wgog6xb" path="res://Scenes/Taskbar/task_button.tscn" id="4_ffhkf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f032v"]
+atlas = ExtResource("4_323wh")
+region = Rect2(537, 304, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3y51e"]
+atlas = ExtResource("4_323wh")
+region = Rect2(273, 160, 16, 16)
+
+[node name="TaskBar" type="PanelContainer" unique_id=577164259]
+custom_minimum_size = Vector2(0, 32)
+offset_right = 503.0
+offset_bottom = 40.0
+theme = ExtResource("2_2c7mr")
+theme_type_variation = &"TaskBar"
+script = ExtResource("1_u7nkp")
+
+[node name="Row" type="HBoxContainer" parent="." unique_id=1451832046]
+layout_mode = 2
+
+[node name="StartButton" type="Button" parent="Row" unique_id=511837533]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(96, 32)
+layout_mode = 2
+size_flags_stretch_ratio = 0.03
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_2c7mr")
+theme_type_variation = &"ButtonStart"
+text = "Iniciar"
+
+[node name="Separator" type="Control" parent="Row" unique_id=657271080]
+custom_minimum_size = Vector2(6, 0)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="TaskButtons" type="HBoxContainer" parent="Row" unique_id=395183278]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Placeholder" parent="Row/TaskButtons" unique_id=1292997387 instance=ExtResource("4_ffhkf")]
+layout_mode = 2
+text = "Mensagens"
+icon = SubResource("AtlasTexture_f032v")
+
+[node name="Placeholder2" parent="Row/TaskButtons" unique_id=1057258674 instance=ExtResource("4_ffhkf")]
+layout_mode = 2
+text = "Navegador"
+icon = SubResource("AtlasTexture_3y51e")
+
+[node name="ClockPanel" type="PanelContainer" parent="Row" unique_id=664696347]
+custom_minimum_size = Vector2(86, 32)
+layout_mode = 2
+theme = ExtResource("2_2c7mr")
+theme_type_variation = &"ClockBar"
+
+[node name="Clock" type="Label" parent="Row/ClockPanel" unique_id=1829149593]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("2_2c7mr")
+theme_type_variation = &"LabelClock"
+text = "67:67"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BlinkTimer" type="Timer" parent="." unique_id=372198267]
+unique_name_in_owner = true
+wait_time = 0.5
+autostart = true

@@ -1,0 +1,130 @@
+[gd_scene format=3 uid="uid://d2xa6pdtlj0uf"]
+
+[ext_resource type="PackedScene" uid="uid://d3grvjnul4qot" path="res://Scenes/Windows/Browser/Pages/base_page.tscn" id="1_behwr"]
+[ext_resource type="Script" uid="uid://b6jsoapcontfc" path="res://Scripts/Windows/Browser/Pages/Portal/result_page.gd" id="2_gxx8c"]
+[ext_resource type="PackedScene" uid="uid://c2pxvuw873ksl" path="res://Scenes/Windows/Browser/Pages/Portal/result_card.tscn" id="3_uxbg0"]
+
+[node name="ResultPage" unique_id=1943806628 instance=ExtResource("1_behwr")]
+accessibility_name = "Resultado"
+script = ExtResource("2_gxx8c")
+title_page = "Resultado"
+
+[node name="Title" type="Label" parent="Root/Margin/Body" parent_id_path=PackedInt32Array(2987910) index="0" unique_id=63120788]
+layout_mode = 2
+theme_type_variation = &"LabelPage"
+text = "Resultado do dia"
+
+[node name="Notice" type="PanelContainer" parent="Root/Margin/Body" parent_id_path=PackedInt32Array(2987910) index="1" unique_id=310627930]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_type_variation = &"CardNotice"
+
+[node name="Box" type="VBoxContainer" parent="Root/Margin/Body/Notice" index="0" unique_id=719498901]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Msg" type="Label" parent="Root/Margin/Body/Notice/Box" index="0" unique_id=689085571]
+layout_mode = 2
+theme_type_variation = &"LabelNotice"
+text = "Termine a fila para ver o resultado."
+autowrap_mode = 3
+
+[node name="Buttons" type="HBoxContainer" parent="Root/Margin/Body/Notice/Box" index="1" unique_id=1725109442]
+layout_mode = 2
+
+[node name="BtnBackQueue" type="Button" parent="Root/Margin/Body/Notice/Box/Buttons" index="0" unique_id=1496121324]
+unique_name_in_owner = true
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ButtonLarge"
+text = "Ir para a fila"
+
+[node name="Result" type="VBoxContainer" parent="Root/Margin/Body" parent_id_path=PackedInt32Array(2987910) index="2" unique_id=1665217445]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Top" type="HBoxContainer" parent="Root/Margin/Body/Result" index="0" unique_id=1228227867]
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[node name="Score" type="VBoxContainer" parent="Root/Margin/Body/Result/Top" index="0" unique_id=1580034263]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Correct" type="Label" parent="Root/Margin/Body/Result/Top/Score" index="0" unique_id=199549533]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabelPage"
+theme_override_font_sizes/font_size = 32
+text = "3 de 4"
+
+[node name="Percentage" type="Label" parent="Root/Margin/Body/Result/Top/Score" index="1" unique_id=1087904992]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabelSubtitle"
+text = "75% de acertos"
+
+[node name="Seal" type="PanelContainer" parent="Root/Margin/Body/Result/Top" index="1" unique_id=1506150823]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 4
+theme_type_variation = &"ApprovedSeal"
+
+[node name="SealText" type="Label" parent="Root/Margin/Body/Result/Top/Seal" index="0" unique_id=1197604949]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabelOk"
+theme_override_font_sizes/font_size = 25
+text = "APROVADO"
+
+[node name="Gap" type="Control" parent="Root/Margin/Body/Result/Top" index="2" unique_id=41371333]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="BtnEnd" type="Button" parent="Root/Margin/Body/Result/Top" index="3" unique_id=292510118]
+unique_name_in_owner = true
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ButtonLarge"
+text = "Encerrar expediente"
+
+[node name="Message" type="Label" parent="Root/Margin/Body/Result" index="1" unique_id=15855007]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabelOk"
+text = "Você passou do mínimo de 70%. Bom trabalho!"
+autowrap_mode = 3
+
+[node name="LblReview" type="Label" parent="Root/Margin/Body/Result" index="2" unique_id=560748230]
+layout_mode = 2
+theme_type_variation = &"LabelSubtitle"
+text = "Revisão dos casos"
+
+[node name="Cases" type="VBoxContainer" parent="Root/Margin/Body/Result" index="3" unique_id=814816732]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Example" parent="Root/Margin/Body/Result/Cases" index="0" unique_id=128835099 instance=ExtResource("3_uxbg0")]
+layout_mode = 2
+
+[node name="Example2" parent="Root/Margin/Body/Result/Cases" index="1" unique_id=1302586929 instance=ExtResource("3_uxbg0")]
+layout_mode = 2
+
+[node name="Footer" type="VBoxContainer" parent="Root/Margin/Body/Result" index="4" unique_id=1258211255]
+layout_mode = 2
+alignment = 2
+
+[node name="BtnEnd2" type="Button" parent="Root/Margin/Body/Result/Footer" index="0" unique_id=1629875303]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ButtonLarge"
+text = "Encerrar expediente"

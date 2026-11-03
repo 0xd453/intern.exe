@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://bmidbckl418md"]
+
+[ext_resource type="Theme" uid="uid://6sjk1c0e1lag" path="res://Theme/windows_xp.tres" id="1_72es4"]
+[ext_resource type="Script" uid="uid://drdbj7gx4fqx6" path="res://Scripts/Windows/Browser/Pages/Portal/type_card.gd" id="2_2f4rr"]
+
+[node name="TypeCard" type="PanelContainer" unique_id=560296860]
+offset_right = 102.0
+offset_bottom = 188.0
+size_flags_horizontal = 3
+theme = ExtResource("1_72es4")
+theme_type_variation = &"Card"
+script = ExtResource("2_2f4rr")
+
+[node name="Box" type="VBoxContainer" parent="." unique_id=404673431]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Type" type="Label" parent="Box" unique_id=1873729693]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabelSubtitle"
+text = "Trojan"
+
+[node name="Text" type="Label" parent="Box" unique_id=970601470]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Finge ser um programa legítimo"
+autowrap_mode = 3
+
+[node name="Separator" type="HSeparator" parent="Box" unique_id=1478578684]
+layout_mode = 2
+
+[node name="LblSigns" type="Label" parent="Box" unique_id=41819528]
+layout_mode = 2
+theme_type_variation = &"LabelSmallBold"
+text = "Sinais comuns"
+
+[node name="Signs" type="Label" parent="Box" unique_id=1481580713]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabelSmall"
+text = "• Sinal exemplo"
+autowrap_mode = 3

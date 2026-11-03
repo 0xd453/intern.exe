@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bqomcytkvqr3g"]
+
+[ext_resource type="Theme" uid="uid://6sjk1c0e1lag" path="res://Theme/windows_xp.tres" id="1_aopmt"]
+
+[node name="ResponseButton" type="Button" unique_id=1682346387]
+offset_right = 127.0
+offset_bottom = 24.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource("1_aopmt")
+text = "Resposta"

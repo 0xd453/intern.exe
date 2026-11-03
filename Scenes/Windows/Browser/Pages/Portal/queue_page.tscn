@@ -1,0 +1,128 @@
+[gd_scene format=3 uid="uid://drh1oaadj67ee"]
+
+[ext_resource type="PackedScene" uid="uid://d3grvjnul4qot" path="res://Scenes/Windows/Browser/Pages/base_page.tscn" id="1_rxrqd"]
+[ext_resource type="Script" uid="uid://clh4aaufdwl5y" path="res://Scripts/Components/text_row.gd" id="2_xqmpv"]
+[ext_resource type="Script" uid="uid://b4hydih0c35nx" path="res://Scripts/Windows/Browser/Pages/Portal/queue_page.gd" id="2_ynj4i"]
+[ext_resource type="PackedScene" uid="uid://vapk0dpctwda" path="res://Scenes/Components/text_row.tscn" id="3_ynj4i"]
+
+[node name="QueuePage" unique_id=1943806628 instance=ExtResource("1_rxrqd")]
+script = ExtResource("2_ynj4i")
+title_page = "Fila"
+
+[node name="Title" type="Label" parent="Root/Margin/Body" parent_id_path=PackedInt32Array(2987910) index="0" unique_id=1965967637]
+layout_mode = 2
+theme_type_variation = &"LabelPage"
+text = "Fila de triagem"
+
+[node name="Summary" type="HBoxContainer" parent="Root/Margin/Body" parent_id_path=PackedInt32Array(2987910) index="1" unique_id=2142297850]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="TextProgress" type="Label" parent="Root/Margin/Body/Summary" index="0" unique_id=1932157708]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabelBold"
+text = "0 de 4 analisados hoje"
+script = ExtResource("2_xqmpv")
+metadata/_custom_type_script = "uid://clh4aaufdwl5y"
+
+[node name="Progress" type="ProgressBar" parent="Root/Margin/Body/Summary" index="1" unique_id=2068454316]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 14)
+layout_mode = 2
+size_flags_vertical = 4
+show_percentage = false
+
+[node name="CardNext" type="PanelContainer" parent="Root/Margin/Body" parent_id_path=PackedInt32Array(2987910) index="2" unique_id=696606914]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"CardHighlight"
+
+[node name="Box" type="VBoxContainer" parent="Root/Margin/Body/CardNext" index="0" unique_id=867049562]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Label" type="Label" parent="Root/Margin/Body/CardNext/Box" index="0" unique_id=259018209]
+layout_mode = 2
+theme_type_variation = &"LabelSmallBold"
+text = "Próximo arquivo"
+
+[node name="Position" type="Label" parent="Root/Margin/Body/CardNext/Box" index="1" unique_id=1777111593]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabelSmall"
+text = "Arquivo 1 de 4"
+
+[node name="NextName" type="Label" parent="Root/Margin/Body/CardNext/Box" index="2" unique_id=1410057034]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabelTitle"
+text = "arquivo.exe"
+
+[node name="DetailNext" type="Label" parent="Root/Margin/Body/CardNext/Box" index="3" unique_id=978172239]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Enviado por Setor de Suporte - chegou por Download"
+
+[node name="Buttons" type="HBoxContainer" parent="Root/Margin/Body/CardNext/Box" index="4" unique_id=1883321376]
+layout_mode = 2
+
+[node name="BtnAnalyze" type="Button" parent="Root/Margin/Body/CardNext/Box/Buttons" index="0" unique_id=466199162]
+unique_name_in_owner = true
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ButtonLarge"
+text = "Analisar este arquivo →"
+
+[node name="CardEnd" type="PanelContainer" parent="Root/Margin/Body" parent_id_path=PackedInt32Array(2987910) index="3" unique_id=1114319322]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_type_variation = &"CardOk"
+
+[node name="Box" type="VBoxContainer" parent="Root/Margin/Body/CardEnd" index="0" unique_id=574193010]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Msg" type="Label" parent="Root/Margin/Body/CardEnd/Box" index="0" unique_id=357576973]
+layout_mode = 2
+theme_type_variation = &"LabelOk"
+text = "Todos os arquivos de hoje foram analisados."
+autowrap_mode = 3
+
+[node name="Buttons" type="HBoxContainer" parent="Root/Margin/Body/CardEnd/Box" index="1" unique_id=1574261247]
+layout_mode = 2
+
+[node name="BtnResult" type="Button" parent="Root/Margin/Body/CardEnd/Box/Buttons" index="0" unique_id=639562965]
+unique_name_in_owner = true
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ButtonLarge"
+text = "Ver resultado do dia →"
+
+[node name="DoneSection" type="VBoxContainer" parent="Root/Margin/Body" parent_id_path=PackedInt32Array(2987910) index="4" unique_id=1872885873]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="LblDone" type="Label" parent="Root/Margin/Body/DoneSection" index="0" unique_id=1523207353]
+layout_mode = 2
+theme_type_variation = &"LabelSubtitle"
+text = "Já analisados hoje"
+
+[node name="DoneList" type="VBoxContainer" parent="Root/Margin/Body/DoneSection" index="1" unique_id=1244340416]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="Example" parent="Root/Margin/Body/DoneSection/DoneList" index="0" unique_id=1281746059 instance=ExtResource("3_ynj4i")]
+layout_mode = 2
+theme_type_variation = &"LabelSmall"
+text = "• exemplo.exe"
+
+[node name="Example2" parent="Root/Margin/Body/DoneSection/DoneList" index="1" unique_id=478659861 instance=ExtResource("3_ynj4i")]
+layout_mode = 2
+theme_type_variation = &"LabelSmall"
+text = "• exemplo.exe"

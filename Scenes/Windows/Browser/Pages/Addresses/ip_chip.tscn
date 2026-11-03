@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bs2wdkeh58kmh"]
+
+[ext_resource type="Theme" uid="uid://6sjk1c0e1lag" path="res://Theme/windows_xp.tres" id="1_xtgbd"]
+
+[node name="IPChip" type="Button" unique_id=1846113796]
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource("1_xtgbd")
+theme_type_variation = &"IPChip"
+text = "192.168.0.1"

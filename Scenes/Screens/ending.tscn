@@ -1,0 +1,176 @@
+[gd_scene format=3 uid="uid://bellq27tf0i80"]
+
+[ext_resource type="Theme" uid="uid://6sjk1c0e1lag" path="res://Theme/windows_xp.tres" id="1_s2bv2"]
+[ext_resource type="Script" uid="uid://bcp7ifpnnodr3" path="res://Scripts/Screens/ending.gd" id="2_ta52w"]
+[ext_resource type="Texture2D" uid="uid://b4gt2bmit7lbg" path="res://Assets/Wallpaper/windows-wallpaper.png" id="3_sieno"]
+[ext_resource type="Script" uid="uid://doymsm0hda38e" path="res://Scripts/Windows/base_window.gd" id="4_f7srv"]
+[ext_resource type="PackedScene" uid="uid://vapk0dpctwda" path="res://Scenes/Components/text_row.tscn" id="5_53mtp"]
+
+[node name="Ending" type="Control" unique_id=1527145061]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_s2bv2")
+script = ExtResource("2_ta52w")
+
+[node name="Wallpaper" type="TextureRect" parent="." unique_id=262903618]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_sieno")
+expand_mode = 1
+
+[node name="Center" type="CenterContainer" parent="." unique_id=1984468207]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="WindowXP" type="PanelContainer" parent="Center" unique_id=804512762]
+custom_minimum_size = Vector2(760, 0)
+layout_mode = 2
+theme = ExtResource("1_s2bv2")
+theme_type_variation = &"WindowFrame"
+script = ExtResource("4_f7srv")
+title = "Fim do estágio"
+
+[node name="Column" type="VBoxContainer" parent="Center/WindowXP" unique_id=13426630]
+layout_mode = 2
+
+[node name="TopBar" type="PanelContainer" parent="Center/WindowXP/Column" unique_id=1734514700]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_type_variation = &"WindowTopBar"
+
+[node name="Row" type="HBoxContainer" parent="Center/WindowXP/Column/TopBar" unique_id=1400841332]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Icon" type="TextureRect" parent="Center/WindowXP/Column/TopBar/Row" unique_id=1695900139]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Title" type="Label" parent="Center/WindowXP/Column/TopBar/Row" unique_id=2099691470]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"LabelWindowTitle"
+text = "Window Title"
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="BodyMargin" type="MarginContainer" parent="Center/WindowXP/Column" unique_id=1462539604]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="Body" type="PanelContainer" parent="Center/WindowXP/Column/BodyMargin" unique_id=2054584626]
+layout_mode = 2
+theme_type_variation = &"WindowBody"
+
+[node name="Content" type="MarginContainer" parent="Center/WindowXP/Column/BodyMargin/Body" unique_id=886505314]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="Center/WindowXP/Column/BodyMargin/Body/Content" unique_id=1167075363]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="Content" type="VBoxContainer" parent="Center/WindowXP/Column/BodyMargin/Body/Content/Margin" unique_id=2109382693]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="EndingTitle" type="Label" parent="Center/WindowXP/Column/BodyMargin/Body/Content/Margin/Content" unique_id=1168871623]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabelPage"
+text = "Final: Efetivado"
+
+[node name="CardText" type="PanelContainer" parent="Center/WindowXP/Column/BodyMargin/Body/Content/Margin/Content" unique_id=1648340469]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"CardOk"
+
+[node name="EndingText" type="Label" parent="Center/WindowXP/Column/BodyMargin/Body/Content/Margin/Content/CardText" unique_id=1522504851]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Texto final"
+autowrap_mode = 3
+
+[node name="LabelSummary" type="Label" parent="Center/WindowXP/Column/BodyMargin/Body/Content/Margin/Content" unique_id=1981178345]
+layout_mode = 2
+theme_type_variation = &"LabelSubtitle"
+text = "Resumo do Estágio"
+
+[node name="Summary" type="VBoxContainer" parent="Center/WindowXP/Column/BodyMargin/Body/Content/Margin/Content" unique_id=320021026]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Example" parent="Center/WindowXP/Column/BodyMargin/Body/Content/Margin/Content/Summary" unique_id=1281746059 instance=ExtResource("5_53mtp")]
+layout_mode = 2
+theme_type_variation = &"LabelOk"
+text = "Dia 1 (Segunda-feira): 3 de 4 casos (75%) - Aprovado"
+
+[node name="Example2" parent="Center/WindowXP/Column/BodyMargin/Body/Content/Margin/Content/Summary" unique_id=725742356 instance=ExtResource("5_53mtp")]
+layout_mode = 2
+theme_type_variation = &"LabelError"
+text = "Dia 2 (Terça-feira): 2 de 5 casos (40%) - Reprovado"
+
+[node name="SectionErrors" type="VBoxContainer" parent="Center/WindowXP/Column/BodyMargin/Body/Content/Margin/Content" unique_id=950315859]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="LabelError" type="Label" parent="Center/WindowXP/Column/BodyMargin/Body/Content/Margin/Content/SectionErrors" unique_id=1860675776]
+layout_mode = 2
+theme_type_variation = &"LabelSubtitle"
+text = "Onde você errou"
+
+[node name="Scroll" type="ScrollContainer" parent="Center/WindowXP/Column/BodyMargin/Body/Content/Margin/Content/SectionErrors" unique_id=1277259545]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="Errors" type="VBoxContainer" parent="Center/WindowXP/Column/BodyMargin/Body/Content/Margin/Content/SectionErrors/Scroll" unique_id=357910605]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="Example" parent="Center/WindowXP/Column/BodyMargin/Body/Content/Margin/Content/SectionErrors/Scroll/Errors" unique_id=846813207 instance=ExtResource("5_53mtp")]
+layout_mode = 2
+text = "• arquivo.exe - Trojan: explicação do caso."
+
+[node name="Buttons" type="HBoxContainer" parent="Center/WindowXP/Column/BodyMargin/Body/Content/Margin/Content" unique_id=941495726]
+layout_mode = 2
+alignment = 1
+
+[node name="BtnPlayAgain" type="Button" parent="Center/WindowXP/Column/BodyMargin/Body/Content/Margin/Content/Buttons" unique_id=1448289737]
+unique_name_in_owner = true
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ButtonLarge"
+text = "Jogar de novo"

@@ -1,0 +1,265 @@
+[gd_scene format=3 uid="uid://mpq8ln8c0i35"]
+
+[ext_resource type="PackedScene" uid="uid://d3grvjnul4qot" path="res://Scenes/Windows/Browser/Pages/base_page.tscn" id="1_ojb7i"]
+[ext_resource type="Script" uid="uid://b263g8cuisxjj" path="res://Scripts/Windows/Browser/Pages/Portal/case_page.gd" id="2_wjatf"]
+[ext_resource type="PackedScene" uid="uid://ch8pg7puatct7" path="res://Scenes/Windows/Browser/Components/field_row.tscn" id="3_qqs3m"]
+[ext_resource type="PackedScene" uid="uid://dbb2gyn6i51q4" path="res://Scenes/Windows/Browser/Components/tool_button.tscn" id="4_eo2uq"]
+[ext_resource type="Texture2D" uid="uid://cbc5cpx61leon" path="res://Assets/icons/tool_signature.png" id="5_eo2uq"]
+[ext_resource type="PackedScene" uid="uid://dq4swaefsdpoc" path="res://Scenes/Windows/Browser/Pages/Portal/question_row.tscn" id="6_vl5sb"]
+
+[node name="CasePage" unique_id=1943806628 instance=ExtResource("1_ojb7i")]
+script = ExtResource("2_wjatf")
+title_page = "Caso"
+
+[node name="BtnQueue" type="Button" parent="Root/Margin/Body" parent_id_path=PackedInt32Array(2987910) index="0" unique_id=758998245]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ButtonLink"
+text = "← Fila"
+
+[node name="HeaderCase" type="VBoxContainer" parent="Root/Margin/Body" parent_id_path=PackedInt32Array(2987910) index="1" unique_id=1685129172]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="TitleCase" type="Label" parent="Root/Margin/Body/HeaderCase" index="0" unique_id=1638880799]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabelSmallBold"
+text = "Caso 1 de 4"
+
+[node name="FileName" type="Label" parent="Root/Margin/Body/HeaderCase" index="1" unique_id=1354136276]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabelTitle"
+text = "arquivo.exe"
+
+[node name="Notice" type="PanelContainer" parent="Root/Margin/Body" parent_id_path=PackedInt32Array(2987910) index="2" unique_id=1337832075]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_type_variation = &"Card"
+
+[node name="Box" type="VBoxContainer" parent="Root/Margin/Body/Notice" index="0" unique_id=849317331]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="NoticeText" type="Label" parent="Root/Margin/Body/Notice/Box" index="0" unique_id=1771242633]
+unique_name_in_owner = true
+layout_mode = 2
+autowrap_mode = 3
+
+[node name="Buttons" type="HBoxContainer" parent="Root/Margin/Body/Notice/Box" index="1" unique_id=141177091]
+layout_mode = 2
+
+[node name="BtnNoticeQueue" type="Button" parent="Root/Margin/Body/Notice/Box/Buttons" index="0" unique_id=1247036175]
+unique_name_in_owner = true
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ButtonLarge"
+text = "Ir para a fila"
+
+[node name="Analysis" type="HBoxContainer" parent="Root/Margin/Body" parent_id_path=PackedInt32Array(2987910) index="3" unique_id=1332707040]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="ColLeft" type="VBoxContainer" parent="Root/Margin/Body/Analysis" index="0" unique_id=325235878]
+custom_minimum_size = Vector2(330, 0)
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="CardSheet" type="PanelContainer" parent="Root/Margin/Body/Analysis/ColLeft" index="0" unique_id=1949042304]
+layout_mode = 2
+theme_type_variation = &"Card"
+
+[node name="Box" type="VBoxContainer" parent="Root/Margin/Body/Analysis/ColLeft/CardSheet" index="0" unique_id=1446477011]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="LblSheet" type="Label" parent="Root/Margin/Body/Analysis/ColLeft/CardSheet/Box" index="0" unique_id=1902017315]
+layout_mode = 2
+theme_type_variation = &"LabelSubtitle"
+text = "Ficha do arquivo"
+
+[node name="Fields" type="VBoxContainer" parent="Root/Margin/Body/Analysis/ColLeft/CardSheet/Box" index="1" unique_id=1242506137]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Example" parent="Root/Margin/Body/Analysis/ColLeft/CardSheet/Box/Fields" index="0" unique_id=643036331 instance=ExtResource("3_qqs3m")]
+layout_mode = 2
+
+[node name="Example2" parent="Root/Margin/Body/Analysis/ColLeft/CardSheet/Box/Fields" index="1" unique_id=298523502 instance=ExtResource("3_qqs3m")]
+layout_mode = 2
+
+[node name="Example3" parent="Root/Margin/Body/Analysis/ColLeft/CardSheet/Box/Fields" index="2" unique_id=2034596252 instance=ExtResource("3_qqs3m")]
+layout_mode = 2
+
+[node name="Example4" parent="Root/Margin/Body/Analysis/ColLeft/CardSheet/Box/Fields" index="3" unique_id=959010538 instance=ExtResource("3_qqs3m")]
+layout_mode = 2
+
+[node name="Example5" parent="Root/Margin/Body/Analysis/ColLeft/CardSheet/Box/Fields" index="4" unique_id=1524703517 instance=ExtResource("3_qqs3m")]
+layout_mode = 2
+
+[node name="CardTools" type="PanelContainer" parent="Root/Margin/Body/Analysis/ColLeft" index="1" unique_id=1763835874]
+layout_mode = 2
+theme_type_variation = &"Card"
+
+[node name="Box" type="VBoxContainer" parent="Root/Margin/Body/Analysis/ColLeft/CardTools" index="0" unique_id=1576675014]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="LblTool" type="Label" parent="Root/Margin/Body/Analysis/ColLeft/CardTools/Box" index="0" unique_id=1062018487]
+layout_mode = 2
+theme_type_variation = &"LabelSubtitle"
+text = "Ferramentas do Laboratório"
+
+[node name="Tools" type="VBoxContainer" parent="Root/Margin/Body/Analysis/ColLeft/CardTools/Box" index="1" unique_id=1307742883]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Example" parent="Root/Margin/Body/Analysis/ColLeft/CardTools/Box/Tools" index="0" unique_id=605211036 instance=ExtResource("4_eo2uq")]
+layout_mode = 2
+
+[node name="Example2" parent="Root/Margin/Body/Analysis/ColLeft/CardTools/Box/Tools" index="1" unique_id=382707787 instance=ExtResource("4_eo2uq")]
+layout_mode = 2
+text = "Verificador de Assinaturas"
+icon = ExtResource("5_eo2uq")
+
+[node name="ColRight" type="VBoxContainer" parent="Root/Margin/Body/Analysis" index="1" unique_id=574614891]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CardDecision" type="PanelContainer" parent="Root/Margin/Body/Analysis/ColRight" index="0" unique_id=2110855726]
+layout_mode = 2
+theme_type_variation = &"Card"
+
+[node name="Box" type="VBoxContainer" parent="Root/Margin/Body/Analysis/ColRight/CardDecision" index="0" unique_id=1212343870]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="LblDecision" type="Label" parent="Root/Margin/Body/Analysis/ColRight/CardDecision/Box" index="0" unique_id=1713998365]
+layout_mode = 2
+theme_type_variation = &"LabelSubtitle"
+text = "Sua decisão"
+
+[node name="LblQuestions" type="Label" parent="Root/Margin/Body/Analysis/ColRight/CardDecision/Box" index="1" unique_id=2056775656]
+layout_mode = 2
+theme_type_variation = &"LabelBold"
+text = "Responda as 4 perguntas:"
+
+[node name="Questions" type="VBoxContainer" parent="Root/Margin/Body/Analysis/ColRight/CardDecision/Box" index="2" unique_id=1569253826]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Example" parent="Root/Margin/Body/Analysis/ColRight/CardDecision/Box/Questions" index="0" unique_id=639862837 instance=ExtResource("6_vl5sb")]
+layout_mode = 2
+
+[node name="Example2" parent="Root/Margin/Body/Analysis/ColRight/CardDecision/Box/Questions" index="1" unique_id=566951050 instance=ExtResource("6_vl5sb")]
+layout_mode = 2
+
+[node name="Example3" parent="Root/Margin/Body/Analysis/ColRight/CardDecision/Box/Questions" index="2" unique_id=1271709661 instance=ExtResource("6_vl5sb")]
+layout_mode = 2
+
+[node name="Example4" parent="Root/Margin/Body/Analysis/ColRight/CardDecision/Box/Questions" index="3" unique_id=1970845717 instance=ExtResource("6_vl5sb")]
+layout_mode = 2
+
+[node name="Gap" type="HSeparator" parent="Root/Margin/Body/Analysis/ColRight/CardDecision/Box" index="3" unique_id=2126429097]
+layout_mode = 2
+
+[node name="LblVeredict" type="Label" parent="Root/Margin/Body/Analysis/ColRight/CardDecision/Box" index="4" unique_id=2012211907]
+layout_mode = 2
+theme_type_variation = &"LabelBold"
+text = "Qual é o veredito?"
+
+[node name="RowVeredict" type="HBoxContainer" parent="Root/Margin/Body/Analysis/ColRight/CardDecision/Box" index="5" unique_id=676425876]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="BtnClean" type="Button" parent="Root/Margin/Body/Analysis/ColRight/CardDecision/Box/RowVeredict" index="0" unique_id=1295883495]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ButtonClean"
+toggle_mode = true
+text = "LIMPO"
+
+[node name="BtnMalicious" type="Button" parent="Root/Margin/Body/Analysis/ColRight/CardDecision/Box/RowVeredict" index="1" unique_id=299043288]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ButtonClean"
+toggle_mode = true
+text = "MALICIOSO"
+
+[node name="TypeButtons" type="HBoxContainer" parent="Root/Margin/Body/Analysis/ColRight/CardDecision/Box" index="6" unique_id=335891936]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="LblType" type="Label" parent="Root/Margin/Body/Analysis/ColRight/CardDecision/Box/TypeButtons" index="0" unique_id=1644769806]
+layout_mode = 2
+theme_type_variation = &"LabelBold"
+text = "Tipo:"
+
+[node name="BtnTrojan" type="Button" parent="Root/Margin/Body/Analysis/ColRight/CardDecision/Box/TypeButtons" index="1" unique_id=223383208]
+unique_name_in_owner = true
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ButtonOption"
+toggle_mode = true
+text = "Trojan"
+
+[node name="BtnAdware" type="Button" parent="Root/Margin/Body/Analysis/ColRight/CardDecision/Box/TypeButtons" index="2" unique_id=1611211002]
+unique_name_in_owner = true
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ButtonOption"
+toggle_mode = true
+text = "Adware"
+
+[node name="BtnRansomware" type="Button" parent="Root/Margin/Body/Analysis/ColRight/CardDecision/Box/TypeButtons" index="3" unique_id=1859330218]
+unique_name_in_owner = true
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ButtonOption"
+toggle_mode = true
+text = "Ransomware"
+
+[node name="Footer" type="HBoxContainer" parent="Root/Margin/Body/Analysis/ColRight/CardDecision/Box" index="7" unique_id=1097808860]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="DecisionNotice" type="Label" parent="Root/Margin/Body/Analysis/ColRight/CardDecision/Box/Footer" index="0" unique_id=1736280985]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"LabelSmall"
+text = "Responda as 4 perguntas"
+autowrap_mode = 3
+
+[node name="BtnStamp" type="Button" parent="Root/Margin/Body/Analysis/ColRight/CardDecision/Box/Footer" index="1" unique_id=2117875451]
+unique_name_in_owner = true
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ButtonLarge"
+disabled = true
+text = "Carimbar Veredito"

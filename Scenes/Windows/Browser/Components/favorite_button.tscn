@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://6lo6e13cpcmp"]
+
+[ext_resource type="Theme" uid="uid://6sjk1c0e1lag" path="res://Theme/windows_xp.tres" id="1_0ja4i"]
+[ext_resource type="Texture2D" uid="uid://xhp471vyis2l" path="res://Assets/tango-desktop-icons/image-tango-feet.png" id="2_y8exk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mlvbm"]
+atlas = ExtResource("2_y8exk")
+region = Rect2(81, 207, 16, 16)
+
+[node name="Button" type="Button" unique_id=975734038]
+offset_right = 118.0
+offset_bottom = 20.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource("1_0ja4i")
+theme_type_variation = &"ButtonLink"
+text = "Portal Interno"
+icon = SubResource("AtlasTexture_mlvbm")

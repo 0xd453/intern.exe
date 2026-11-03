@@ -1,0 +1,516 @@
+[
+	{
+		"id": "c01",
+		"name": "leitor_pdf_setup.exe",
+		"extension": ".exe",
+		"size": "4,1 MB",
+		"path": "C:\\Users\\Bia\\Downloads\\",
+		"sent_by": "Setor de Suporte",
+		"arrived_by": "download",
+		"request": "A Bia precisa abrir os manuais dos equipamentos e o leitor antigo travou.",
+		"signature": {
+			"state": "valid",
+			"publisher": "Lumina Software",
+			"issuer": "AC Pública Confiável",
+			"created_at": "há 3 meses",
+			"note": "A assinatura confere com a editora."
+		},
+		"behavior": [
+			"Instalou em C:\\Arquivos de Programas\\Lumina",
+			"Criou atalho na área de trabalho"
+		],
+		"hash": {
+			"value": "a1d4e8b2c7f0",
+			"reputation": "known_clean",
+			"seen": "Visto em 4.800 computadores",
+			"note": "Programa conhecido, sem alertas."
+		},
+		"real_verdict": "clean",
+		"real_type": null,
+		"answer_key": [
+			false,
+			false,
+			false,
+			false
+		],
+		"explanation": "Limpo. A editora é conhecida, a assinatura confere e o programa só instalou o que prometia: um leitor de PDF."
+	},
+	{
+		"id": "c02",
+		"name": "barra_super_gratis.exe",
+		"extension": ".exe",
+		"size": "3,2 MB",
+		"path": "C:\\Users\\Bia\\Downloads\\",
+		"sent_by": "Setor Comercial",
+		"arrived_by": "download",
+		"request": "Vi um anúncio de uma barra que deixa a internet mais rápida.",
+		"signature": {
+			"state": "ausente",
+			"publisher": "Desconhecida",
+			"issuer": "Nenhum",
+			"created_at": "há 1 dia",
+			"note": "O arquivo não tem assinatura digital."
+		},
+		"behavior": [
+			"Abriu 12 janelas de anúncio",
+			"Alterou a página inicial do navegador"
+		],
+		"hash": {
+			"value": "7c20ab91e3d5",
+			"reputation": "known_malicious",
+			"seen": "Visto em 312 computadores",
+			"note": "O laboratório já classificou este arquivo como malware."
+		},
+		"real_verdict": "malicious",
+		"real_type": "adware",
+		"answer_key": [
+			false,
+			false,
+			true,
+			false
+		],
+		"explanation": "Adware. Veio de um instalador grátis, não tem assinatura e encheu a tela de anúncios depois de trocar a página inicial."
+	},
+	{
+		"id": "c03",
+		"name": "navegador_update.exe",
+		"extension": ".exe",
+		"size": "1,8 MB",
+		"path": "C:\\Users\\Public\\Temp\\",
+		"sent_by": "Setor Financeiro",
+		"arrived_by": "download",
+		"request": "Baixei para atualizar o navegador, mas ele pediu uma permissão estranha.",
+		"signature": {
+			"state": "ausente",
+			"publisher": "Desconhecida",
+			"issuer": "Nenhum",
+			"created_at": "há 2 dias",
+			"note": "O arquivo não tem assinatura digital."
+		},
+		"behavior": [
+			"Conectou em 203.0.113.9",
+			"Copiou-se para a pasta Inicializar"
+		],
+		"hash": {
+			"value": "a41f9c07d2e1",
+			"reputation": "unknown",
+			"seen": "Nunca visto antes",
+			"note": "O laboratório ainda não analisou este arquivo."
+		},
+		"real_verdict": "malicious",
+		"real_type": "trojan",
+		"answer_key": [
+			true,
+			false,
+			false,
+			true
+		],
+		"explanation": "Trojan. Finge ser a atualização do navegador, não tem assinatura e liga para um endereço de fora. Ao se copiar para a pasta Inicializar, ele volta a rodar toda vez que o computador liga."
+	},
+	{
+		"id": "c04",
+		"name": "folha_pagamento.pdf.exe",
+		"extension": ".exe",
+		"size": "640 KB",
+		"path": "C:\\Users\\Marcos\\Downloads\\",
+		"sent_by": "Setor Financeiro",
+		"arrived_by": "email",
+		"request": "Recebi a folha de pagamento por e-mail e não consegui abrir.",
+		"signature": {
+			"state": "ausente",
+			"publisher": "Desconhecida",
+			"issuer": "Nenhum",
+			"created_at": "há 3 horas",
+			"note": "O arquivo não tem assinatura digital."
+		},
+		"behavior": [
+			"Criou 40 arquivos .lock",
+			"Apagou cópias de segurança"
+		],
+		"hash": {
+			"value": "e90b3ad41f66",
+			"reputation": "known_malicious",
+			"seen": "Visto em 87 computadores",
+			"note": "O laboratório já classificou este arquivo como malware."
+		},
+		"real_verdict": "malicious",
+		"real_type": "ransomware",
+		"answer_key": [
+			true,
+			true,
+			false,
+			false
+		],
+		"explanation": "Ransomware. O nome tem extensão dupla (.pdf.exe), veio por e-mail, trancou arquivos e ainda apagou os backups para dificultar a recuperação."
+	},
+	{
+		"id": "c05",
+		"name": "acesso_remoto_ti.exe",
+		"extension": ".exe",
+		"size": "9,8 MB",
+		"path": "C:\\Fortify\\TI\\Ferramentas\\",
+		"sent_by": "Setor de TI",
+		"arrived_by": "internal_network",
+		"request": "Ferramenta que a TI usa para dar suporte às máquinas.",
+		"signature": {
+			"state": "valid",
+			"publisher": "Fortify TI",
+			"issuer": "AC interna da Fortify",
+			"created_at": "há 6 meses",
+			"note": "Assinatura interna da própria empresa."
+		},
+		"behavior": [
+			"Conectou em 10.0.0.5",
+			"Abriu a porta 3389",
+			"Exibiu uma janela de confirmação ao usuário"
+		],
+		"hash": {
+			"value": "b5c13d98a042",
+			"reputation": "known_clean",
+			"seen": "Visto em 46 computadores da empresa",
+			"note": "Ferramenta aprovada pela TI."
+		},
+		"real_verdict": "clean",
+		"real_type": null,
+		"answer_key": [
+			false,
+			false,
+			false,
+			false
+		],
+		"explanation": "Limpo. Acesso remoto assusta, mas aqui a ferramenta é da TI, tem assinatura interna, hash aprovado e só fala com a rede da empresa. Ela ainda mostra uma janela de confirmação ao usuário antes de abrir a sessão."
+	},
+	{
+		"id": "c06",
+		"name": "gerenciador_drivers.exe",
+		"extension": ".exe",
+		"size": "2,4 MB",
+		"path": "C:\\Users\\Public\\Temp\\",
+		"sent_by": "Setor Comercial",
+		"arrived_by": "download",
+		"request": "Vi que o driver da impressora estava desatualizado.",
+		"signature": {
+			"state": "invalid",
+			"publisher": "Driver Soft Ltda",
+			"issuer": "AC Pública Confiável",
+			"created_at": "há 2 dias",
+			"note": "O arquivo foi alterado depois de assinado."
+		},
+		"behavior": [
+			"Conectou em 198.51.100.7 a cada 60 s",
+			"Copiou-se para a pasta Inicializar",
+			"Registrou-se na lista de programas como Driver de impressora"
+		],
+		"hash": {
+			"value": "3fd7e02a91bc",
+			"reputation": "unknown",
+			"seen": "Nunca visto antes",
+			"note": "O laboratório ainda não analisou este arquivo."
+		},
+		"real_verdict": "malicious",
+		"real_type": "trojan",
+		"answer_key": [
+			true,
+			false,
+			false,
+			true
+		],
+		"explanation": "Trojan. A assinatura quebrou porque alguém mexeu no arquivo depois de assinado. Ele roda de uma pasta temporária, se passa por driver e liga para o mesmo endereço de fora a cada minuto."
+	},
+	{
+		"id": "c07",
+		"name": "oferta_cupom_pro.exe",
+		"extension": ".exe",
+		"size": "5,5 MB",
+		"path": "C:\\Users\\Paulo\\Downloads\\",
+		"sent_by": "Recepção",
+		"arrived_by": "download",
+		"request": "Achei um programa de cupons de desconto para a loja.",
+		"signature": {
+			"state": "valid",
+			"publisher": "Promo Digital Ltda",
+			"issuer": "AC Pública Confiável",
+			"created_at": "há 1 mês",
+			"note": "A assinatura confere com a editora."
+		},
+		"behavior": [
+			"Abriu anúncios em tela cheia",
+			"Instalou uma barra de ferramentas",
+			"Alterou o mecanismo de busca padrão"
+		],
+		"hash": {
+			"value": "5a08c6d1e9f4",
+			"reputation": "known_malicious",
+			"seen": "Visto em 1.200 computadores",
+			"note": "O laboratório já classificou este arquivo como adware."
+		},
+		"real_verdict": "malicious",
+		"real_type": "adware",
+		"answer_key": [
+			false,
+			false,
+			true,
+			false
+		],
+		"explanation": "Adware. A assinatura é válida, mas ela só diz quem fez o arquivo, não o que ele faz. O hash conhecido e o comportamento mostram anúncios e mudanças nas configurações sem pedir."
+	},
+	{
+		"id": "c08",
+		"name": "player_musicas.exe",
+		"extension": ".exe",
+		"size": "7,2 MB",
+		"path": "C:\\Users\\Camila\\Downloads\\",
+		"sent_by": "Setor de Marketing",
+		"arrived_by": "download",
+		"request": "Quero ouvir música enquanto monto as campanhas.",
+		"signature": {
+			"state": "valid",
+			"publisher": "Som & Cia",
+			"issuer": "AC Pública Confiável",
+			"created_at": "há 8 meses",
+			"note": "A assinatura confere com a editora."
+		},
+		"behavior": [
+			"Instalou em C:\\Arquivos de Programas\\SomCia",
+			"Pediu acesso à pasta Músicas",
+			"Mostrou uma opção para trocar a página inicial"
+		],
+		"hash": {
+			"value": "c9e41b7f03a8",
+			"reputation": "unknown",
+			"seen": "Nunca visto antes",
+			"note": "O laboratório ainda não analisou este arquivo."
+		},
+		"real_verdict": "clean",
+		"real_type": null,
+		"answer_key": [
+			false,
+			false,
+			false,
+			false
+		],
+		"explanation": "Limpo. O hash é desconhecido, mas o resto fecha: assinatura válida de uma editora com meses de estrada, instalação normal e a troca da página inicial aparece como opção, não como imposição."
+	},
+	{
+		"id": "c09",
+		"name": "nota_fiscal_outubro.xlsx.exe",
+		"extension": ".exe",
+		"size": "700 KB",
+		"path": "C:\\Users\\Marcos\\Downloads\\",
+		"sent_by": "Setor Financeiro",
+		"arrived_by": "email",
+		"request": "Chegou a nota fiscal de outubro, preciso lançar hoje.",
+		"signature": {
+			"state": "ausente",
+			"publisher": "Desconhecida",
+			"issuer": "Nenhum",
+			"created_at": "há 2 horas",
+			"note": "O arquivo não tem assinatura digital."
+		},
+		"behavior": [
+			"Criou 85 arquivos .lock",
+			"Exibiu uma mensagem pedindo pagamento",
+			"Apagou cópias de segurança"
+		],
+		"hash": {
+			"value": "d27a5e8b1c60",
+			"reputation": "unknown",
+			"seen": "Nunca visto antes",
+			"note": "O laboratório ainda não analisou este arquivo."
+		},
+		"real_verdict": "malicious",
+		"real_type": "ransomware",
+		"answer_key": [
+			true,
+			true,
+			false,
+			false
+		],
+		"explanation": "Ransomware. Extensão dupla (.xlsx.exe), veio por e-mail e começou a trancar arquivos. O hash desconhecido não muda nada: o comportamento já diz tudo."
+	},
+	{
+		"id": "c10",
+		"name": "atualizador_seguranca.exe",
+		"extension": ".exe",
+		"size": "3,0 MB",
+		"path": "C:\\Users\\Public\\Temp\\",
+		"sent_by": "Setor Jurídico",
+		"arrived_by": "email",
+		"request": "Recebi um e-mail da Fortify dizendo que a proteção precisa ser atualizada hoje.",
+		"signature": {
+			"state": "invalid",
+			"publisher": "Fortify Segurança",
+			"issuer": "Desconhecido",
+			"created_at": "há 1 hora",
+			"note": "A autoridade que emitiu o certificado não consta na lista da Fortify."
+		},
+		"behavior": [
+			"Conectou em 203.0.113.9",
+			"Desativou o antivírus local",
+			"Pediu permissão de administrador"
+		],
+		"hash": {
+			"value": "8be3f50a27d9",
+			"reputation": "unknown",
+			"seen": "Nunca visto antes",
+			"note": "O laboratório ainda não analisou este arquivo."
+		},
+		"real_verdict": "malicious",
+		"real_type": "trojan",
+		"answer_key": [
+			true,
+			false,
+			false,
+			true
+		],
+		"explanation": "Trojan. Usa o nome da empresa, mas o certificado não é da AC interna e o arquivo liga para um endereço que o laboratório já viu em outros ataques. Desligar o antivírus fecha a conta."
+	},
+	{
+		"id": "c11",
+		"name": "backup_semanal.exe",
+		"extension": ".exe",
+		"size": "12 MB",
+		"path": "C:\\Fortify\\TI\\Backup\\",
+		"sent_by": "Setor de TI",
+		"arrived_by": "internal_network",
+		"request": "Roda toda noite, como sempre.",
+		"signature": {
+			"state": "valid",
+			"publisher": "Fortify TI",
+			"issuer": "AC interna da Fortify",
+			"created_at": "há 4 meses",
+			"note": "Assinatura interna da própria empresa."
+		},
+		"behavior": [
+			"Copiou 300 arquivos para 10.0.0.20",
+			"Criou arquivos .bak",
+			"Terminou em 4 minutos e se fechou"
+		],
+		"hash": {
+			"value": "f16c92d4a3e7",
+			"reputation": "known_clean",
+			"seen": "Visto em 12 servidores da empresa",
+			"note": "Rotina de backup aprovada pela TI."
+		},
+		"real_verdict": "clean",
+		"real_type": null,
+		"answer_key": [
+			false,
+			false,
+			false,
+			false
+		],
+		"explanation": "Limpo. É um backup normal, assinado pela TI e com destino na rede interna. Copiar não é alterar nem apagar: os arquivos originais ficam como estavam."
+	},
+	{
+		"id": "c12",
+		"name": "relatorio_vendas.pdf.exe",
+		"extension": ".exe",
+		"size": "590 KB",
+		"path": "C:\\Users\\Paulo\\Downloads\\",
+		"sent_by": "Setor Comercial",
+		"arrived_by": "internal_network",
+		"request": "O cliente mandou e é urgente. Preciso abrir antes da reunião das 14h.",
+		"signature": {
+			"state": "ausente",
+			"publisher": "Desconhecida",
+			"issuer": "Nenhum",
+			"created_at": "há 20 min",
+			"note": "O arquivo não tem assinatura digital."
+		},
+		"behavior": [
+			"Criou 120 arquivos .lock",
+			"Apagou cópias de segurança",
+			"Tentou chegar às pastas compartilhadas da rede"
+		],
+		"hash": {
+			"value": "0c7d3e91b5a2",
+			"reputation": "unknown",
+			"seen": "Nunca visto antes",
+			"note": "O laboratório ainda não analisou este arquivo."
+		},
+		"real_verdict": "malicious",
+		"real_type": "ransomware",
+		"answer_key": [
+			true,
+			true,
+			false,
+			false
+		],
+		"explanation": "Ransomware. A urgência do recado é isca. Dessa vez o arquivo chegou pela rede interna, e não por e-mail, mas a extensão dupla (.pdf.exe) e os arquivos sendo trancados não deixam dúvida."
+	},
+	{
+		"id": "c13",
+		"name": "ferramenta_diagnostico.exe",
+		"extension": ".exe",
+		"size": "1,1 MB",
+		"path": "C:\\Users\\Public\\Downloads\\",
+		"sent_by": "Setor de TI",
+		"arrived_by": "download",
+		"request": "Preciso rodar isso na máquina da Bia. Ela reclamou que o computador está lento.",
+		"signature": {
+			"state": "invalid",
+			"publisher": "Fortify TI",
+			"issuer": "AC interna da Fortify",
+			"created_at": "há 1 ano",
+			"note": "Certificado vencido há 5 dias. Conteúdo do arquivo íntegro."
+		},
+		"behavior": [
+			"Criou arquivos temporários",
+			"Conectou em 10.0.0.31",
+			"Leu o uso de memória e de disco"
+		],
+		"hash": {
+			"value": "2b58f7c3e0d9",
+			"reputation": "known_clean",
+			"seen": "Visto em 38 computadores da empresa",
+			"note": "Ferramenta aprovada pela TI."
+		},
+		"real_verdict": "clean",
+		"real_type": null,
+		"answer_key": [
+			false,
+			false,
+			false,
+			false
+		],
+		"explanation": "Limpo. Está numa pasta pública e a assinatura aparece como inválida, mas o motivo é o certificado vencido, não adulteração. O hash é aprovado, o comportamento é só de leitura e o destino fica na rede interna."
+	},
+	{
+		"id": "c14",
+		"name": "atualizacao_leitor_pdf.exe",
+		"extension": ".exe",
+		"size": "4,3 MB",
+		"path": "C:\\Users\\Bia\\Downloads\\",
+		"sent_by": "Setor de Suporte",
+		"arrived_by": "email",
+		"request": "O leitor de PDF da Bia começou a pedir uma atualização. O e-mail trouxe o instalador novo.",
+		"signature": {
+			"state": "valid",
+			"publisher": "Lumina Software",
+			"issuer": "AC Pública Confiável",
+			"created_at": "há 2 dias",
+			"note": "A assinatura confere com a editora. Certificado emitido há 2 dias."
+		},
+		"behavior": [
+			"Instalou em C:\\Arquivos de Programas\\Lumina",
+			"Conectou em 198.51.100.7 a cada 60 s",
+			"Criou uma tarefa agendada na inicialização do sistema"
+		],
+		"hash": {
+			"value": "9a3c71e5d0b8",
+			"reputation": "unknown",
+			"seen": "Nunca visto antes",
+			"note": "O laboratório ainda não analisou este arquivo."
+		},
+		"real_verdict": "malicious",
+		"real_type": "trojan",
+		"answer_key": [
+			true,
+			false,
+			false,
+			true
+		],
+		"explanation": "Trojan. A assinatura é válida e o certificado é recente, o que sozinho não incomoda numa atualização. O que pesa é o resto: hash desconhecido, tarefa agendada na inicialização e conexão com o mesmo endereço de fora que já tinha aparecido na terça."
+	}
+]

@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://7ko36uue4asa"]
+
+[ext_resource type="Script" uid="uid://bqm5nu6xxcxvc" path="res://Scripts/Desktop/desktop_icon.gd" id="1_0ws62"]
+[ext_resource type="Theme" uid="uid://6sjk1c0e1lag" path="res://Theme/windows_xp.tres" id="1_ugmmh"]
+
+[node name="DesktopIcon" type="Control" unique_id=568710704]
+custom_minimum_size = Vector2(84, 78)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_0ws62")
+
+[node name="Background" type="PanelContainer" parent="." unique_id=2063783472]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("1_ugmmh")
+theme_type_variation = &"Icon"
+
+[node name="Container" type="VBoxContainer" parent="." unique_id=227396397]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -23.5
+offset_right = 16.0
+offset_bottom = 23.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 2
+
+[node name="Icon" type="TextureRect" parent="Container" unique_id=939455041]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 4
+
+[node name="IconLabel" type="Label" parent="Container" unique_id=1756884415]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("1_ugmmh")
+theme_type_variation = &"LabelIcon"
+text = "App"
+horizontal_alignment = 1
+
+[node name="Badge" type="PanelContainer" parent="." unique_id=1678267341]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(18, 18)
+layout_mode = 0
+offset_left = 54.0
+offset_top = 2.0
+offset_right = 72.0
+offset_bottom = 20.0
+mouse_filter = 2
+theme = ExtResource("1_ugmmh")
+theme_type_variation = &"NotificationBadge"
+
+[node name="BadgeLabel" type="Label" parent="Badge" unique_id=2001486729]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("1_ugmmh")
+theme_type_variation = &"LabelNotificationBadge"
+text = "0"
+horizontal_alignment = 1

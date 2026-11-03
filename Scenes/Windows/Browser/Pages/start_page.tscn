@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dw8oivl6h1pb3"]
+
+[ext_resource type="PackedScene" uid="uid://d3grvjnul4qot" path="res://Scenes/Windows/Browser/Pages/base_page.tscn" id="1_1f3gq"]
+[ext_resource type="Script" uid="uid://df7r1cjqtfast" path="res://Scripts/Windows/Browser/Pages/start_page.gd" id="2_j71xd"]
+[ext_resource type="PackedScene" uid="uid://5r5rw4c30jq" path="res://Scenes/Windows/Browser/Components/link_card.tscn" id="3_3r662"]
+
+[node name="StartPage" unique_id=1943806628 instance=ExtResource("1_1f3gq")]
+script = ExtResource("2_j71xd")
+title_page = "Página inicial"
+
+[node name="Title" type="Label" parent="Root/Margin/Body" parent_id_path=PackedInt32Array(2987910) index="0" unique_id=1572499469]
+layout_mode = 2
+theme_type_variation = &"LabelPage"
+text = "Página Inicial"
+
+[node name="Saved" type="HBoxContainer" parent="Root/Margin/Body" parent_id_path=PackedInt32Array(2987910) index="1" unique_id=997348444]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Example" parent="Root/Margin/Body/Saved" index="0" unique_id=404606559 instance=ExtResource("3_3r662")]
+layout_mode = 2
+
+[node name="Example2" parent="Root/Margin/Body/Saved" index="1" unique_id=1224514351 instance=ExtResource("3_3r662")]
+layout_mode = 2

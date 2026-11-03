@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://cdww71fw6b8r1"]
+
+[ext_resource type="Theme" uid="uid://6sjk1c0e1lag" path="res://Theme/windows_xp.tres" id="1_wufry"]
+[ext_resource type="Script" uid="uid://uplq70nejkfa" path="res://Scripts/Screens/day_card.gd" id="2_kgtt5"]
+
+[node name="DayCard" type="Control" unique_id=2124772106]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_wufry")
+script = ExtResource("2_kgtt5")
+
+[node name="Background" type="PanelContainer" parent="." unique_id=1069798771]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_type_variation = &"BlackBackground"
+
+[node name="Center" type="CenterContainer" parent="." unique_id=1587476087]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Box" type="VBoxContainer" parent="Center" unique_id=166378388]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 14
+
+[node name="TextDayCard" type="Label" parent="Center/Box" unique_id=955226385]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabelDayCard"
+text = "Segunda-Feira, 09:00"
+horizontal_alignment = 1
+
+[node name="SubDayCard" type="Label" parent="Center/Box" unique_id=279413690]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabelSubBrand"
+text = "Dia 1 de 3"
+horizontal_alignment = 1
+
+[node name="Tip" type="Label" parent="Center/Box" unique_id=807872444]
+layout_mode = 2
+theme_type_variation = &"LabelSmall"
+text = "Clique para continuar"
+horizontal_alignment = 1

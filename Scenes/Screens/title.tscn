@@ -1,0 +1,156 @@
+[gd_scene format=3 uid="uid://bx3pjnr5iat61"]
+
+[ext_resource type="Script" uid="uid://dp63e0fnx7hyl" path="res://Scripts/Screens/title.gd" id="1_2hqyc"]
+[ext_resource type="Texture2D" uid="uid://b4gt2bmit7lbg" path="res://Assets/Wallpaper/windows-wallpaper.png" id="2_f5v8a"]
+[ext_resource type="Theme" uid="uid://6sjk1c0e1lag" path="res://Theme/windows_xp.tres" id="3_06bay"]
+[ext_resource type="Script" uid="uid://doymsm0hda38e" path="res://Scripts/Windows/base_window.gd" id="4_k7143"]
+[ext_resource type="Texture2D" uid="uid://xhp471vyis2l" path="res://Assets/tango-desktop-icons/image-tango-feet.png" id="5_glbof"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3y51e"]
+atlas = ExtResource("5_glbof")
+region = Rect2(393, 280, 16, 16)
+
+[node name="Title" type="Control" unique_id=1870051731]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2hqyc")
+
+[node name="Wallpaper" type="TextureRect" parent="." unique_id=1105516944]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_f5v8a")
+expand_mode = 1
+
+[node name="Center" type="CenterContainer" parent="." unique_id=921107231]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="WindowXP" type="PanelContainer" parent="Center" unique_id=804512762]
+custom_minimum_size = Vector2(560, 0)
+layout_mode = 2
+theme = ExtResource("3_06bay")
+theme_type_variation = &"WindowFrame"
+script = ExtResource("4_k7143")
+title = "Intern.exe"
+
+[node name="Column" type="VBoxContainer" parent="Center/WindowXP" unique_id=13426630]
+layout_mode = 2
+
+[node name="TopBar" type="PanelContainer" parent="Center/WindowXP/Column" unique_id=1734514700]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_type_variation = &"WindowTopBar"
+
+[node name="Row" type="HBoxContainer" parent="Center/WindowXP/Column/TopBar" unique_id=1400841332]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Icon" type="TextureRect" parent="Center/WindowXP/Column/TopBar/Row" unique_id=1695900139]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Title" type="Label" parent="Center/WindowXP/Column/TopBar/Row" unique_id=2099691470]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"LabelWindowTitle"
+text = "Window Title"
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="BodyMargin" type="MarginContainer" parent="Center/WindowXP/Column" unique_id=1462539604]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="Body" type="PanelContainer" parent="Center/WindowXP/Column/BodyMargin" unique_id=2054584626]
+layout_mode = 2
+theme_type_variation = &"WindowBody"
+
+[node name="Content" type="MarginContainer" parent="Center/WindowXP/Column/BodyMargin/Body" unique_id=886505314]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="Center/WindowXP/Column/BodyMargin/Body/Content" unique_id=1136866678]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 28
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 30
+
+[node name="Content" type="VBoxContainer" parent="Center/WindowXP/Column/BodyMargin/Body/Content/Margin" unique_id=2069192763]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="Logo" type="TextureRect" parent="Center/WindowXP/Column/BodyMargin/Body/Content/Margin/Content" unique_id=2075949023]
+custom_minimum_size = Vector2(72, 72)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = SubResource("AtlasTexture_3y51e")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Brand" type="Label" parent="Center/WindowXP/Column/BodyMargin/Body/Content/Margin/Content" unique_id=2053084513]
+layout_mode = 2
+theme_type_variation = &"LabelTitle"
+theme_override_font_sizes/font_size = 50
+text = "Intern.exe"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="Center/WindowXP/Column/BodyMargin/Body/Content/Margin/Content" unique_id=1825259315]
+layout_mode = 2
+theme_type_variation = &"LabelSubtitle"
+text = "Programa de Estágio - Fortify Security"
+horizontal_alignment = 1
+
+[node name="Description" type="Label" parent="Center/WindowXP/Column/BodyMargin/Body/Content/Margin/Content" unique_id=1898433885]
+layout_mode = 2
+text = "Você é o estagiário que acabou de entrar no laboratório. Investigue cada arquivo e decida se é limpo ou malicioso."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Buttons" type="VBoxContainer" parent="Center/WindowXP/Column/BodyMargin/Body/Content/Margin/Content" unique_id=556846278]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="BtnStart" type="Button" parent="Center/WindowXP/Column/BodyMargin/Body/Content/Margin/Content/Buttons" unique_id=146376871]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ButtonLarge"
+text = "Começar"
+
+[node name="BtnExit" type="Button" parent="Center/WindowXP/Column/BodyMargin/Body/Content/Margin/Content/Buttons" unique_id=317824538]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ButtonLarge"
+text = "Sair"

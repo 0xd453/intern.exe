@@ -1,0 +1,170 @@
+[gd_scene format=3 uid="uid://b3sgklb6specp"]
+
+[ext_resource type="Texture2D" uid="uid://b4gt2bmit7lbg" path="res://Assets/Wallpaper/windows-wallpaper.png" id="1_jjgbg"]
+[ext_resource type="Script" uid="uid://w6315iq0ctm4" path="res://Scripts/Desktop/desktop.gd" id="1_jjvhh"]
+[ext_resource type="PackedScene" uid="uid://7ko36uue4asa" path="res://Scenes/Desktop/desktop_icon.tscn" id="2_8gbba"]
+[ext_resource type="PackedScene" uid="uid://wxku7d266gvg" path="res://Scenes/Taskbar/taskbar.tscn" id="2_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://cpq6qiehqscit" path="res://Scenes/Windows/Messenger/messenger.tscn" id="4_21xkr"]
+[ext_resource type="PackedScene" uid="uid://ta0wb14joknf" path="res://Scenes/Windows/Browser/browser.tscn" id="4_mlub3"]
+[ext_resource type="Texture2D" uid="uid://xhp471vyis2l" path="res://Assets/tango-desktop-icons/image-tango-feet.png" id="5_6bp64"]
+[ext_resource type="Theme" uid="uid://6sjk1c0e1lag" path="res://Theme/windows_xp.tres" id="7_i7wu7"]
+[ext_resource type="PackedScene" uid="uid://d3kkt0lwd1ina" path="res://Scenes/Desktop/menu_option.tscn" id="8_mlub3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_68cd7"]
+atlas = ExtResource("5_6bp64")
+region = Rect2(273, 160, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6bp64"]
+atlas = ExtResource("5_6bp64")
+region = Rect2(537, 304, 16, 16)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f032v"]
+bg_color = Color(0, 0.32941177, 0.8901961, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bo1nx"]
+bg_color = Color(0.14117648, 0.36862746, 0.8627451, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jjgbg"]
+atlas = ExtResource("5_6bp64")
+region = Rect2(537, 304, 16, 16)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i7wu7"]
+bg_color = Color(0.14117648, 0.36862746, 0.8627451, 1)
+
+[node name="Desktop" type="Control" unique_id=554712590]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jjvhh")
+
+[node name="Wallpaper" type="TextureRect" parent="." unique_id=500483281]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_jjgbg")
+expand_mode = 1
+
+[node name="DesktopIcons" type="VBoxContainer" parent="." unique_id=1395885953]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 96.0
+offset_bottom = 176.0
+mouse_filter = 2
+theme_override_constants/separation = 8
+
+[node name="DesktopIcon" parent="DesktopIcons" unique_id=568710704 instance=ExtResource("2_8gbba")]
+layout_mode = 2
+app_id = "browser"
+app = ExtResource("4_mlub3")
+label = "Navegador"
+texture = SubResource("AtlasTexture_68cd7")
+
+[node name="DesktopIcon2" parent="DesktopIcons" unique_id=1396716847 instance=ExtResource("2_8gbba")]
+layout_mode = 2
+app_id = "msn"
+app = ExtResource("4_21xkr")
+label = "Mensagens"
+texture = SubResource("AtlasTexture_6bp64")
+
+[node name="WindowsLayer" type="Control" parent="." unique_id=2102182169]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TaskBar" parent="." unique_id=989714876 instance=ExtResource("2_bo1nx")]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -32.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="StartMenu" type="Panel" parent="." unique_id=2063089714]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -262.0
+offset_right = 260.0
+offset_bottom = -32.0
+grow_vertical = 0
+theme = ExtResource("7_i7wu7")
+theme_override_styles/panel = SubResource("StyleBoxFlat_f032v")
+
+[node name="Layout" type="VBoxContainer" parent="StartMenu" unique_id=485584677]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Header" type="Panel" parent="StartMenu/Layout" unique_id=16508136]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bo1nx")
+
+[node name="HeaderRow" type="HBoxContainer" parent="StartMenu/Layout/Header" unique_id=1079160875]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 8.0
+offset_right = 8.0
+offset_bottom = 64.0
+grow_horizontal = 2
+
+[node name="Avatar" type="TextureRect" parent="StartMenu/Layout/Header/HeaderRow" unique_id=952572261]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_vertical = 4
+texture = SubResource("AtlasTexture_jjgbg")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Username" type="Label" parent="StartMenu/Layout/Header/HeaderRow" unique_id=348423560]
+layout_mode = 2
+theme_type_variation = &"LabelSmallBold"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Estagiário"
+
+[node name="ItemsPanel" type="PanelContainer" parent="StartMenu/Layout" unique_id=1956765217]
+layout_mode = 2
+size_flags_vertical = 3
+theme_type_variation = &"PageBackground"
+
+[node name="Items" type="VBoxContainer" parent="StartMenu/Layout/ItemsPanel" unique_id=708780313]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="MenuOption" parent="StartMenu/Layout/ItemsPanel/Items" unique_id=365441482 instance=ExtResource("8_mlub3")]
+layout_mode = 2
+text = "Sair"
+exit = true
+
+[node name="Footer" type="Panel" parent="StartMenu/Layout" unique_id=129577983]
+custom_minimum_size = Vector2(0, 28)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_i7wu7")

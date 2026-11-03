@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://0d6ebgplkm10"]
+
+[ext_resource type="Theme" uid="uid://6sjk1c0e1lag" path="res://Theme/windows_xp.tres" id="1_kurhf"]
+
+[node name="NavButton" type="Button" unique_id=492296989]
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource("1_kurhf")
+theme_type_variation = &"NavButton"
+text = "Início"

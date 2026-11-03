@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://o6p02h14xyw6"]
+
+[ext_resource type="PackedScene" uid="uid://d3grvjnul4qot" path="res://Scenes/Windows/Browser/Pages/base_page.tscn" id="1_e0guy"]
+[ext_resource type="Script" uid="uid://2qj5bardby3s" path="res://Scripts/Windows/Browser/Pages/Portal/home_page.gd" id="2_qb6lu"]
+[ext_resource type="PackedScene" uid="uid://5r5rw4c30jq" path="res://Scenes/Windows/Browser/Components/link_card.tscn" id="3_0i86r"]
+[ext_resource type="Texture2D" uid="uid://xhp471vyis2l" path="res://Assets/tango-desktop-icons/image-tango-feet.png" id="4_qb6lu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qb6lu"]
+atlas = ExtResource("4_qb6lu")
+region = Rect2(129, 160, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0i86r"]
+atlas = ExtResource("4_qb6lu")
+region = Rect2(465, 160, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xid2o"]
+atlas = ExtResource("4_qb6lu")
+region = Rect2(201, 304, 16, 16)
+
+[node name="HomePage" unique_id=1943806628 instance=ExtResource("1_e0guy")]
+script = ExtResource("2_qb6lu")
+title_page = "Início"
+
+[node name="Greeting" type="Label" parent="Root/Margin/Body" parent_id_path=PackedInt32Array(2987910) index="0" unique_id=620107046]
+layout_mode = 2
+theme_type_variation = &"LabelPage"
+text = "Bem-vindo!"
+
+[node name="Day" type="Label" parent="Root/Margin/Body" parent_id_path=PackedInt32Array(2987910) index="1" unique_id=1934350757]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabelSubtitle"
+text = "Segunda-feira · dia 1 de 3"
+
+[node name="CardToday" type="PanelContainer" parent="Root/Margin/Body" parent_id_path=PackedInt32Array(2987910) index="2" unique_id=1358343085]
+layout_mode = 2
+theme_type_variation = &"Card"
+
+[node name="Box" type="VBoxContainer" parent="Root/Margin/Body/CardToday" index="0" unique_id=533040576]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Remaining" type="Label" parent="Root/Margin/Body/CardToday/Box" index="0" unique_id=1222723120]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabelBold"
+text = "0 de 4 arquivos analisados hoje"
+
+[node name="Progress" type="ProgressBar" parent="Root/Margin/Body/CardToday/Box" index="1" unique_id=230558630]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 14)
+layout_mode = 2
+max_value = 4.0
+show_percentage = false
+
+[node name="Shortcuts" type="HBoxContainer" parent="Root/Margin/Body" parent_id_path=PackedInt32Array(2987910) index="3" unique_id=1088760388]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="TileManual" parent="Root/Margin/Body/Shortcuts" index="0" unique_id=404606559 instance=ExtResource("3_0i86r")]
+unique_name_in_owner = true
+layout_mode = 2
+title = "Manual"
+description = "Os tipos de ameaça e dicas do dia."
+text_button = "Abrir o Manual"
+icon = SubResource("AtlasTexture_qb6lu")
+
+[node name="TileQueue" parent="Root/Margin/Body/Shortcuts" index="1" unique_id=858607906 instance=ExtResource("3_0i86r")]
+unique_name_in_owner = true
+layout_mode = 2
+title = "Fila de triagem"
+description = "Veja o próximo arquivo a analisar."
+text_button = "Ir para a fila"
+icon = SubResource("AtlasTexture_0i86r")
+
+[node name="TileLab" parent="Root/Margin/Body/Shortcuts" index="2" unique_id=1692462202 instance=ExtResource("3_0i86r")]
+unique_name_in_owner = true
+layout_mode = 2
+title = "Laboratório"
+description = "Ferramentas para investigar o arquivo."
+text_button = "Abrir o Laboratório"
+icon = SubResource("AtlasTexture_xid2o")

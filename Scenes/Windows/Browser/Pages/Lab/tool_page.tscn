@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://jghlw22yfq1x"]
+
+[ext_resource type="PackedScene" uid="uid://d3grvjnul4qot" path="res://Scenes/Windows/Browser/Pages/base_page.tscn" id="1_rc8kf"]
+[ext_resource type="Script" uid="uid://ca4bcp5tqmsud" path="res://Scripts/Windows/Browser/Pages/Lab/tool_page.gd" id="2_pxduh"]
+
+[node name="ToolPage" unique_id=1943806628 instance=ExtResource("1_rc8kf")]
+script = ExtResource("2_pxduh")
+tool_id = ""
+
+[node name="BtnBackCase" type="Button" parent="Root/Margin/Body" parent_id_path=PackedInt32Array(2987910) index="0" unique_id=566462122]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ButtonLink"
+text = "← Voltar ao caso"
+
+[node name="Title" type="Label" parent="Root/Margin/Body" parent_id_path=PackedInt32Array(2987910) index="1" unique_id=1694171357]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabelPage"
+text = "Ferramenta"
+
+[node name="File" type="Label" parent="Root/Margin/Body" parent_id_path=PackedInt32Array(2987910) index="2" unique_id=173542112]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabelSubtitle"
+text = "arquivo.exe"
+
+[node name="Blocked" type="PanelContainer" parent="Root/Margin/Body" parent_id_path=PackedInt32Array(2987910) index="3" unique_id=496463805]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_type_variation = &"CardNotice"
+
+[node name="Msg" type="Label" parent="Root/Margin/Body/Blocked" index="0" unique_id=1158337385]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabelNotice"
+text = "Essa ferramenta ainda não foi liberada."
+autowrap_mode = 3
+
+[node name="Details" type="VBoxContainer" parent="Root/Margin/Body" parent_id_path=PackedInt32Array(2987910) index="4" unique_id=872473410]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 10

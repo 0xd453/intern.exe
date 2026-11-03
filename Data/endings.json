@@ -1,0 +1,12 @@
+[
+	{
+		"id": "hired",
+		"title": "Efetivado",
+		"text": "O Artorias chamou você para uma videochamada. \"Três dias, nenhuma advertência. Você leu o que muita gente só olha, e é disso que a gente precisa aqui. A vaga é sua.\" Quando a chamada acabou, o Leo mandou um joinha pelo chat. Boas-vindas à equipe."
+	},
+	{
+		"id": "dismissed",
+		"title": "Dispensado",
+		"text": "O Artorias chamou você para uma videochamada. \"Você se esforçou, mas deixou passar coisa demais para um laboratório que protege tanta gente. Não vamos renovar o seu contrato.\" Quando a chamada acabou, o Leo escreveu no chat: \"Treina e volta. Eu acredito em você.\""
+	}
+]

@@ -1,0 +1,124 @@
+[gd_scene format=3 uid="uid://cwrsiug2xe7j1"]
+
+[ext_resource type="Theme" uid="uid://6sjk1c0e1lag" path="res://Theme/windows_xp.tres" id="1_0kkmy"]
+[ext_resource type="Script" uid="uid://cgb0eft51povl" path="res://Scripts/Windows/xp_dialog.gd" id="2_5x2q3"]
+[ext_resource type="Script" uid="uid://doymsm0hda38e" path="res://Scripts/Windows/base_window.gd" id="3_g4q5k"]
+[ext_resource type="PackedScene" uid="uid://cxy437a865nju" path="res://Scenes/Windows/dialog_button.tscn" id="4_s78nm"]
+
+[node name="XPDialog" type="Control" unique_id=788874518]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_0kkmy")
+script = ExtResource("2_5x2q3")
+
+[node name="Veil" type="PanelContainer" parent="." unique_id=1227783350]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"Veil"
+
+[node name="Center" type="CenterContainer" parent="." unique_id=1866413014]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Frame" type="PanelContainer" parent="Center" unique_id=804512762]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(420, 0)
+layout_mode = 2
+theme = ExtResource("1_0kkmy")
+theme_type_variation = &"WindowFrame"
+script = ExtResource("3_g4q5k")
+
+[node name="Column" type="VBoxContainer" parent="Center/Frame" unique_id=13426630]
+layout_mode = 2
+
+[node name="TopBar" type="PanelContainer" parent="Center/Frame/Column" unique_id=1734514700]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_type_variation = &"WindowTopBar"
+
+[node name="Row" type="HBoxContainer" parent="Center/Frame/Column/TopBar" unique_id=1400841332]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Icon" type="TextureRect" parent="Center/Frame/Column/TopBar/Row" unique_id=1695900139]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Title" type="Label" parent="Center/Frame/Column/TopBar/Row" unique_id=2099691470]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"LabelWindowTitle"
+text = "Window Title"
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="BodyMargin" type="MarginContainer" parent="Center/Frame/Column" unique_id=1462539604]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="Body" type="PanelContainer" parent="Center/Frame/Column/BodyMargin" unique_id=2054584626]
+layout_mode = 2
+theme_type_variation = &"WindowBody"
+
+[node name="Content" type="MarginContainer" parent="Center/Frame/Column/BodyMargin/Body" unique_id=886505314]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="Center/Frame/Column/BodyMargin/Body/Content" unique_id=748145607]
+layout_mode = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 16
+
+[node name="Box" type="VBoxContainer" parent="Center/Frame/Column/BodyMargin/Body/Content/Margin" unique_id=419823023]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Headline" type="Label" parent="Center/Frame/Column/BodyMargin/Body/Content/Margin/Box" unique_id=432746404]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabelTitle"
+text = "Título"
+
+[node name="Text" type="Label" parent="Center/Frame/Column/BodyMargin/Body/Content/Margin/Box" unique_id=1811194153]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Texto do diálogo. Bem breve para testar 123"
+autowrap_mode = 3
+
+[node name="Buttons" type="HBoxContainer" parent="Center/Frame/Column/BodyMargin/Body/Content/Margin/Box" unique_id=1712433700]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 2
+
+[node name="Example" parent="Center/Frame/Column/BodyMargin/Body/Content/Margin/Box/Buttons" unique_id=927930929 instance=ExtResource("4_s78nm")]
+layout_mode = 2
+
+[node name="Example2" parent="Center/Frame/Column/BodyMargin/Body/Content/Margin/Box/Buttons" unique_id=51733047 instance=ExtResource("4_s78nm")]
+layout_mode = 2

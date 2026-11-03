@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://c2pxvuw873ksl"]
+
+[ext_resource type="Theme" uid="uid://6sjk1c0e1lag" path="res://Theme/windows_xp.tres" id="1_2oq08"]
+[ext_resource type="Script" uid="uid://vs8tniuadggn" path="res://Scripts/Windows/Browser/Pages/Portal/result_card.gd" id="2_hhhog"]
+
+[node name="ResultCard" type="PanelContainer" unique_id=128835099]
+offset_right = 153.0
+offset_bottom = 149.0
+theme = ExtResource("1_2oq08")
+theme_type_variation = &"CardOk"
+script = ExtResource("2_hhhog")
+
+[node name="Box" type="VBoxContainer" parent="." unique_id=1486125428]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="Top" type="HBoxContainer" parent="Box" unique_id=307829706]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Box/Top" unique_id=1557917321]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabelBold"
+text = "arquivo.exe"
+
+[node name="Gap" type="Control" parent="Box/Top" unique_id=436156746]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Seal" type="Label" parent="Box/Top" unique_id=223978004]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabelOk"
+text = "CERTO"
+
+[node name="Verdict" type="Label" parent="Box" unique_id=517295932]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Você: Limpo  ·  Correto: Limpo"
+autowrap_mode = 3
+
+[node name="Questionnaire" type="Label" parent="Box" unique_id=493618240]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabelSmall"
+text = "Perguntas: 4 de 4 certas"
+autowrap_mode = 3
+
+[node name="Explanation" type="Label" parent="Box" unique_id=1375872154]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabelSmall"
+text = "Explicação do caso teste abc"
+autowrap_mode = 3

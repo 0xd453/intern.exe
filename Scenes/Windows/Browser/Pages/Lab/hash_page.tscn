@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://crvgsrwlgjeyh"]
+
+[ext_resource type="PackedScene" uid="uid://jghlw22yfq1x" path="res://Scenes/Windows/Browser/Pages/Lab/tool_page.tscn" id="1_fi0o8"]
+[ext_resource type="PackedScene" uid="uid://ch8pg7puatct7" path="res://Scenes/Windows/Browser/Components/field_row.tscn" id="2_g7n2s"]
+[ext_resource type="Script" uid="uid://dfmhfn78r6y22" path="res://Scripts/Windows/Browser/Pages/Lab/hash_page.gd" id="2_xxf20"]
+
+[node name="HashPage" unique_id=1943806628 instance=ExtResource("1_fi0o8")]
+script = ExtResource("2_xxf20")
+tool_id = "hash"
+title_page = "Hash"
+
+[node name="Card" type="PanelContainer" parent="Root/Margin/Body/Details" parent_id_path=PackedInt32Array(872473410) index="0" unique_id=1266605060]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"Card"
+
+[node name="Box" type="VBoxContainer" parent="Root/Margin/Body/Details/Card" index="0" unique_id=1361533431]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Fields" type="VBoxContainer" parent="Root/Margin/Body/Details/Card/Box" index="0" unique_id=2054446740]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Example" parent="Root/Margin/Body/Details/Card/Box/Fields" index="0" unique_id=643036331 instance=ExtResource("2_g7n2s")]
+layout_mode = 2
+
+[node name="Example2" parent="Root/Margin/Body/Details/Card/Box/Fields" index="1" unique_id=578091769 instance=ExtResource("2_g7n2s")]
+layout_mode = 2
+
+[node name="Example3" parent="Root/Margin/Body/Details/Card/Box/Fields" index="2" unique_id=1289178686 instance=ExtResource("2_g7n2s")]
+layout_mode = 2
+
+[node name="Row" type="HBoxContainer" parent="Root/Margin/Body/Details/Card/Box" index="1" unique_id=395152816]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="LblRep" type="Label" parent="Root/Margin/Body/Details/Card/Box/Row" index="0" unique_id=1112608781]
+layout_mode = 2
+theme_type_variation = &"LabelBold"
+text = "Reputação:"
+
+[node name="Tag" type="PanelContainer" parent="Root/Margin/Body/Details/Card/Box/Row" index="1" unique_id=1066404864]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 4
+theme_type_variation = &"TagNeutral"
+
+[node name="TagText" type="Label" parent="Root/Margin/Body/Details/Card/Box/Row/Tag" index="0" unique_id=1479743999]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabelWhiteBold"
+text = "Resultado"
+
+[node name="Note" type="Label" parent="Root/Margin/Body/Details/Card/Box" index="2" unique_id=1952926439]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Nota da ferramenta"
+autowrap_mode = 3

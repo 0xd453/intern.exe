@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://vapk0dpctwda"]
+
+[ext_resource type="Theme" uid="uid://6sjk1c0e1lag" path="res://Theme/windows_xp.tres" id="1_ldc1a"]
+[ext_resource type="Script" uid="uid://clh4aaufdwl5y" path="res://Scripts/Components/text_row.gd" id="2_pla12"]
+
+[node name="Example" type="Label" unique_id=1281746059]
+offset_right = 1.0
+offset_bottom = 153.0
+size_flags_horizontal = 3
+theme = ExtResource("1_ldc1a")
+text = "Texto"
+autowrap_mode = 3
+script = ExtResource("2_pla12")

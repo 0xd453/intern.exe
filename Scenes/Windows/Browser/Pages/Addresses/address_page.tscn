@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://fca5ebffduc6"]
+
+[ext_resource type="PackedScene" uid="uid://d3grvjnul4qot" path="res://Scenes/Windows/Browser/Pages/base_page.tscn" id="1_j5f44"]
+[ext_resource type="PackedScene" uid="uid://ch8pg7puatct7" path="res://Scenes/Windows/Browser/Components/field_row.tscn" id="2_0tlnf"]
+[ext_resource type="Script" uid="uid://cj6wv2cfmy8dr" path="res://Scripts/Windows/Browser/Pages/Addresses/address_page.gd" id="2_b74uf"]
+
+[node name="AddressPage" unique_id=1943806628 instance=ExtResource("1_j5f44")]
+script = ExtResource("2_b74uf")
+title_page = "Endereço"
+
+[node name="BtnClose" type="Button" parent="Root/Margin/Body" parent_id_path=PackedInt32Array(2987910) index="0" unique_id=155190245]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ButtonLink"
+text = "← Voltar"
+
+[node name="Title" type="Label" parent="Root/Margin/Body" parent_id_path=PackedInt32Array(2987910) index="1" unique_id=178512276]
+layout_mode = 2
+theme_type_variation = &"LabelPage"
+text = "Endereço"
+
+[node name="Address" type="Label" parent="Root/Margin/Body" parent_id_path=PackedInt32Array(2987910) index="2" unique_id=205152436]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabelSubtitle"
+text = "192.168.0.1"
+
+[node name="Card" type="PanelContainer" parent="Root/Margin/Body" parent_id_path=PackedInt32Array(2987910) index="3" unique_id=1194808048]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"Card"
+
+[node name="Box" type="VBoxContainer" parent="Root/Margin/Body/Card" index="0" unique_id=2013712852]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Fields" type="VBoxContainer" parent="Root/Margin/Body/Card/Box" index="0" unique_id=1444339438]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Example" parent="Root/Margin/Body/Card/Box/Fields" index="0" unique_id=643036331 instance=ExtResource("2_0tlnf")]
+layout_mode = 2
+
+[node name="Example2" parent="Root/Margin/Body/Card/Box/Fields" index="1" unique_id=983430172 instance=ExtResource("2_0tlnf")]
+layout_mode = 2
+
+[node name="Row" type="HBoxContainer" parent="Root/Margin/Body/Card/Box" index="1" unique_id=632650249]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="LblRep" type="Label" parent="Root/Margin/Body/Card/Box/Row" index="0" unique_id=1945661243]
+layout_mode = 2
+theme_type_variation = &"LabelBold"
+text = "Reputação:"
+
+[node name="Tag" type="PanelContainer" parent="Root/Margin/Body/Card/Box/Row" index="1" unique_id=2039031541]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 4
+theme_type_variation = &"TagError"
+
+[node name="TagText" type="Label" parent="Root/Margin/Body/Card/Box/Row/Tag" index="0" unique_id=683135588]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabelWhiteBold"
+text = "Suspeito"
+
+[node name="Note" type="Label" parent="Root/Margin/Body/Card/Box" index="2" unique_id=1048873099]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Nota sobre endereço"
+autowrap_mode = 3
+
+[node name="Unknown" type="Label" parent="Root/Margin/Body" parent_id_path=PackedInt32Array(2987910) index="4" unique_id=788621695]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_type_variation = &"LabelSmall"
+text = "Sem informações sobre este endereço."

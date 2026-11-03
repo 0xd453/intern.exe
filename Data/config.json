@@ -1,0 +1,121 @@
+{
+	"approve_threshold": 0.7,
+	"clock_start": "09:00",
+	"clock_end": "17:00",
+	"portal_domain": "intranet.test.abc",
+	"loading_time": 0.7,
+	"contacts": [
+		{
+			"id": "boss",
+			"name": "Artorias",
+			"role": "Chefe do Laboratório",
+			"initial_status": "online",
+			"leave": true
+		},
+		{
+			"id": "someone",
+			"name": "Leo",
+			"role": "Analista",
+			"initial_status": "online"
+		}
+	],
+	"questions": [
+		{
+			"id": 1,
+			"text": "Ele se passa por outro programa ou outra empresa?",
+			"points_to": "trojan"
+		},
+		{
+			"id": 2,
+			"text": "Ele altera, criptografa ou apaga arquivos sem pedir?",
+			"points_to": "ransomware"
+		},
+		{
+			"id": 3,
+			"text": "Ele mostra propaganda ou muda configurações sem pedir?",
+			"points_to": "adware"
+		},
+		{
+			"id": 4,
+			"text": "Ele se conecta a endereços externos suspeitos?",
+			"points_to": "reinforces_trojan"
+		}
+	],
+	"tools": [
+		{
+			"id": "sandbox",
+			"title_page": "Sandbox",
+			"name": "Relatório do sandbox",
+			"description": "O que o arquivo fez quando rodou numa máquina de teste.",
+			"icon": "res://Assets/icons/tool_sandbox.png",
+			"host": "lab.test.abc",
+			"path": "/sandbox/{case}",
+			"since_day": 1
+		},
+		{
+			"id": "signature",
+			"title_page": "Assinatura",
+			"name": "Verificador de assinaturas",
+			"description": "Quem assinou o arquivo e se a assinatura vale.",
+			"icon": "res://Assets/icons/tool_signature.png",
+			"host": "lab.test.abc",
+			"path": "/signature/{case}",
+			"since_day": 1
+		},
+		{
+			"id": "hash",
+			"title_page": "Hash",
+			"name": "Banco de hashes",
+			"description": "Se o laboratório já viu este arquivo antes.",
+			"icon": "res://Assets/icons/tool_hash.png",
+			"host": "lab.test.abc",
+			"path": "/hash/{case}",
+			"since_day": 2
+		},
+		{
+			"id": "addresses",
+			"title_page": "Endereços",
+			"name": "Consulta de endereços",
+			"description": "De quem é cada endereço IP.",
+			"icon": "res://Assets/icons/tool_addresses.png",
+			"host": "addresses.test.abc",
+			"path": "/",
+			"since_day": 3
+		}
+	],
+	"labels": {
+		"signature": {
+			"valid": "Válida",
+			"invalid": "Inválida",
+			"ausente": "Ausente"
+		},
+		"arrived_by": {
+			"email": "E-mail",
+			"download": "Download",
+			"usb_drive": "Pendrive",
+			"internal_network": "Rede interna"
+		},
+		"hash_reputation": {
+			"known_malicious": "Conhecido malicioso",
+			"known_clean": "Conhecido limpo",
+			"unknown": "Desconhecido"
+		},
+		"ip_reputation": {
+			"suspicious": "Suspeito",
+			"trusted": "Confiável"
+		},
+		"verdict": {
+			"clean": "Limpo",
+			"malicious": "Malicioso"
+		},
+		"type": {
+			"trojan": "Trojan",
+			"adware": "Adware",
+			"ransomware": "Ransomware"
+		},
+		"status": {
+			"online": "online",
+			"ausente": "ausente"
+		}
+	}
+}
