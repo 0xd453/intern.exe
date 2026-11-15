@@ -363,7 +363,7 @@
 			false,
 			true
 		],
-		"explanation": "Trojan. Usa o nome da empresa, mas o certificado não é da AC interna e o arquivo liga para um endereço que o laboratório já viu em outros ataques. Desligar o antivírus fecha a conta."
+		"explanation": "Trojan. Usa o nome da empresa, mas o certificado não é da autoridade certificadora interna e o arquivo liga para um endereço que o laboratório já viu em outros ataques. Desligar o antivírus fecha a conta."
 	},
 	{
 		"id": "c11",
