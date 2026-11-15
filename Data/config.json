@@ -2,7 +2,7 @@
 	"approve_threshold": 0.7,
 	"clock_start": "09:00",
 	"clock_end": "17:00",
-	"portal_domain": "intranet.test.abc",
+	"portal_domain": "intranet.fortify.sec",
 	"loading_time": 0.7,
 	"contacts": [
 		{
@@ -48,7 +48,7 @@
 			"name": "Relatório do sandbox",
 			"description": "O que o arquivo fez quando rodou numa máquina de teste.",
 			"icon": "res://Assets/icons/tool_sandbox.png",
-			"host": "lab.test.abc",
+			"host": "lab.fortify.sec",
 			"path": "/sandbox/{case}",
 			"since_day": 1
 		},
@@ -58,7 +58,7 @@
 			"name": "Verificador de assinaturas",
 			"description": "Quem assinou o arquivo e se a assinatura vale.",
 			"icon": "res://Assets/icons/tool_signature.png",
-			"host": "lab.test.abc",
+			"host": "lab.fortify.sec",
 			"path": "/signature/{case}",
 			"since_day": 1
 		},
@@ -68,7 +68,7 @@
 			"name": "Banco de hashes",
 			"description": "Se o laboratório já viu este arquivo antes.",
 			"icon": "res://Assets/icons/tool_hash.png",
-			"host": "lab.test.abc",
+			"host": "lab.fortify.sec",
 			"path": "/hash/{case}",
 			"since_day": 2
 		},
@@ -78,7 +78,7 @@
 			"name": "Consulta de endereços",
 			"description": "De quem é cada endereço IP.",
 			"icon": "res://Assets/icons/tool_addresses.png",
-			"host": "addresses.test.abc",
+			"host": "addresses.fortify.sec",
 			"path": "/",
 			"since_day": 3
 		}

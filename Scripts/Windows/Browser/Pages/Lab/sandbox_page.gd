@@ -13,7 +13,7 @@ func build_tool() -> void:
 		l.configure("00:%02d" % seconds, str(row), clickable)
 		l.ip_pressed.connect(
 			func(ip: String) -> void:
-				go("addresses.test.abc/ip/" + ip),
+				go("addresses.fortify.sec/ip/" + ip),
 		)
 		seconds += 3
 	%Tip.visible = clickable

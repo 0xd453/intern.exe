@@ -25,5 +25,5 @@ func build() -> void:
 	)
 	%TileLab.pressed.connect(
 		func() -> void:
-			go("lab.test.abc/"),
+			go("lab.fortify.sec/"),
 	)

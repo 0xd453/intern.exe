@@ -1,7 +1,7 @@
 [
 	{
 		"id": "portal",
-		"host": "intranet.test.abc",
+		"host": "intranet.fortify.sec",
 		"title": "Portal Interno",
 		"description": "Fila de triagem, manual e resultado do dia.",
 		"favorite": true,
@@ -35,7 +35,7 @@
 	},
 	{
 		"id": "lab",
-		"host": "lab.test.abc",
+		"host": "lab.fortify.sec",
 		"title": "Laboratório",
 		"description": "Ferramentas para investigar o arquivo.",
 		"favorite": true,
@@ -56,7 +56,7 @@
 	},
 	{
 		"id": "addresses",
-		"host": "addresses.test.abc",
+		"host": "addresses.fortify.sec",
 		"title": "Consulta de endereços",
 		"description": "De quem é cada endereço IP.",
 		"favorite": true,
