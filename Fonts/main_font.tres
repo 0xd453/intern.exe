@@ -1,0 +1,8 @@
+[gd_resource type="FontVariation" format=3 uid="uid://b00idhu7jfxj"]
+
+[ext_resource type="FontFile" uid="uid://bxladdchfq7m6" path="res://Fonts/Pixellari/Pixellari.ttf" id="1_0r3sl"]
+[ext_resource type="FontFile" uid="uid://d1f6nr1ix6c7j" path="res://Fonts/NotoSansSymbols/NotoSansSymbols.ttf" id="2_0r3sl"]
+
+[resource]
+fallbacks = Array[Font]([ExtResource("2_0r3sl")])
+base_font = ExtResource("1_0r3sl")

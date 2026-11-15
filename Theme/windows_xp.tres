@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://u1gqkaqabraa" path="res://Assets/UI/btn_close_hover.png" id="16_dhbyg"]
 [ext_resource type="Texture2D" uid="uid://drihmqgyejmhi" path="res://Assets/UI/btn_close_pressed.png" id="17_6akea"]
 [ext_resource type="Texture2D" uid="uid://c406dhrx8u25v" path="res://Assets/UI/topbar_inactive.png" id="21_6hwnj"]
+[ext_resource type="FontVariation" uid="uid://b00idhu7jfxj" path="res://Fonts/main_font.tres" id="22_srkfp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_foe7r"]
 content_margin_left = 14.0
@@ -1202,7 +1203,7 @@ texture_margin_right = 8.0
 texture_margin_bottom = 2.0
 
 [resource]
-default_font = ExtResource("1_sxuac")
+default_font = ExtResource("22_srkfp")
 default_font_size = 16
 AddressesHeader/base_type = &"PanelContainer"
 AddressesHeader/styles/panel = SubResource("StyleBoxFlat_foe7r")
@@ -1224,7 +1225,6 @@ Button/colors/icon_disabled_color = Color(1, 1, 1, 0.34901962)
 Button/colors/icon_normal_color = Color(1, 1, 1, 1)
 Button/constants/h_separation = 6
 Button/font_sizes/font_size = 16
-Button/fonts/font = ExtResource("1_sxuac")
 Button/styles/disabled = SubResource("StyleBoxTexture_duft5")
 Button/styles/focus = SubResource("StyleBoxEmpty_iylpr")
 Button/styles/hover = SubResource("StyleBoxTexture_gxcjy")
@@ -1382,7 +1382,6 @@ IconSelected/styles/panel = SubResource("StyleBoxFlat_6hwnj")
 LabHeader/base_type = &"PanelContainer"
 LabHeader/styles/panel = SubResource("StyleBoxFlat_yt4on")
 Label/colors/font_color = Color(0, 0, 0, 1)
-Label/fonts/font = ExtResource("1_sxuac")
 LabelBold/base_type = &"Label"
 LabelBold/colors/font_color = Color(0, 0, 0, 1)
 LabelBold/constants/outline_size = 1

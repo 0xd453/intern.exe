@@ -56,6 +56,7 @@ unique_name_in_owner = true
 layout_mode = 2
 theme_type_variation = &"LabelBold"
 text = "Acerte pelo menos 70% por dia"
+autowrap_mode = 3
 
 [node name="TitleTips" type="Label" parent="Root/Margin/Body" parent_id_path=PackedInt32Array(2987910) index="4" unique_id=1845816615]
 unique_name_in_owner = true
